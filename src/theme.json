@@ -1,0 +1,43 @@
+{
+    "palette": {
+        "common": {
+            "black": "#000",
+            "white": "#fff"
+        },
+        "background": {
+            "paper": "#100e1d",
+            "default": "#fafafa"
+        },
+        "primary": {
+            "light": "#2058f1",
+            "main": "#ffffff",
+            "dark": "linear-gradient(to bottom, #f0f0f0, #ffffff);",
+            "contrastText": "#fff"
+        },
+        "secondary": {
+            "light": "rgba(42, 46, 82, 0.1);",
+            "main": "rgb(54, 58, 101)",
+            "dark": "#0b0d1afa",
+            "contrastText": "#fff"
+        },
+        "error": {
+            "light": "#e57373",
+            "main": "#f44336",
+            "dark": "#d32f2f",
+            "contrastText": "#fff"
+        },
+        "text": {
+            "primary": "rgba(16, 14, 29, 0.8)",
+            "secondary": "rgba(16, 14, 29, 0.17)",
+            "disabled": "rgba(0, 0, 0, 0.38)",
+            "hint": "rgba(0, 0, 0, 0.38)",
+            "hover":"#85878a"
+        },
+        "icon": {
+            "main": "rgba(42, 46, 82, 0.1);",
+            "moreicon": "rgba(42, 46, 82, 0.1);",
+            "model": "#ffffffa3",
+            "icons": "rgba(255, 255, 255, 0.1)"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<svg id="team" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_503" data-name="Group 503" transform="translate(0 0)">
+    <g id="Group_502" data-name="Group 502" transform="translate(0 0)">
+      <circle id="Ellipse_37" data-name="Ellipse 37" cx="2.733" cy="2.733" r="2.733" transform="translate(9.267)" fill="#fff"/>
+      <path id="Path_174" data-name="Path 174" d="M139.838,122.253h7.5a1.222,1.222,0,0,0,1.171-1.264v-.35a2.51,2.51,0,0,0-1.181-2.178,6.761,6.761,0,0,0-7.479,0,2.51,2.51,0,0,0-1.181,2.178v.35A1.222,1.222,0,0,0,139.838,122.253Z" transform="translate(-131.587 -111.337)" fill="#fff"/>
+      <circle id="Ellipse_38" data-name="Ellipse 38" cx="2.733" cy="2.733" r="2.733" transform="translate(2.187 13.082)" fill="#fff"/>
+      <path id="Path_175" data-name="Path 175" d="M8.66,374.462a7.586,7.586,0,0,0-3.739-1.128,7.587,7.587,0,0,0-3.739,1.128A2.51,2.51,0,0,0,0,376.64v.35a1.222,1.222,0,0,0,1.171,1.264h7.5a1.222,1.222,0,0,0,1.171-1.264v-.35A2.51,2.51,0,0,0,8.66,374.462Z" transform="translate(0 -354.254)" fill="#fff"/>
+      <circle id="Ellipse_39" data-name="Ellipse 39" cx="2.733" cy="2.733" r="2.733" transform="translate(16.346 13.082)" fill="#fff"/>
+      <path id="Path_176" data-name="Path 176" d="M285.994,374.462a6.762,6.762,0,0,0-7.479,0,2.51,2.51,0,0,0-1.181,2.178v.35a1.222,1.222,0,0,0,1.171,1.264H286a1.222,1.222,0,0,0,1.171-1.264v-.35A2.51,2.51,0,0,0,285.994,374.462Z" transform="translate(-263.174 -354.254)" fill="#fff"/>
+      <path id="Path_177" data-name="Path 177" d="M176.679,241.227a.547.547,0,0,0,.342-.974l-2.528-2.023v-3.017a.547.547,0,0,0-1.093,0v3.018l-2.528,2.022a.547.547,0,0,0,.683.854l2.392-1.913,2.392,1.913A.545.545,0,0,0,176.679,241.227Z" transform="translate(-161.946 -222.677)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
