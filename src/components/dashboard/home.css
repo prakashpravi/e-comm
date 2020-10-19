@@ -43,23 +43,16 @@
 
 .overlayloadingfilter {
     position: fixed;
-    /* Sit on top of the page content */
     display: block;
-    /* Hidden by default */
     width: 100%;
-    /* Full width (cover the whole page) */
     height: 100%;
-    /* Full height (cover the whole page) */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Black background with opacity */
     z-index: 10000;
-    /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer;
-    /* Add a pointer on hover */
 }
 
 .text {
@@ -85,7 +78,6 @@
 }
 
 .rightImg {
-    /* width: 50% !important; */
     height: auto;
     padding-bottom: 12px;
     padding-left: 15px;
@@ -140,10 +132,6 @@
 
 }
 
-/* .aboutwidth{
-    width: 100%;
-   
-  } */
 .aboutwidth {
     max-width: 1170px;
     margin: auto
@@ -176,19 +164,6 @@
         padding-left: 15px;
         padding-right: 15px;
     }
-
-    /* .aboutFifty{
-      
-      width:50%;
-    }
-    .aboutwidth{
-      width: 100%;
-     
-    }
-    /* .aboutMargin{
-      margin-right: auto;
-      margin-left: auto;
-    } */
 }
 
 @media only screen and (max-width:1440px) and (min-width:1025px) {
@@ -202,10 +177,6 @@
 
     }
 
-    /* .aboutwidth{
-      
-      width:100%;
-    } */
     .sideContent {
         width: 15%;
         margin-top: 5px;
@@ -218,7 +189,6 @@
 
     .rightContent {
         width: 100%;
-        /* height: auto; */
         font-size: 13px;
         padding-bottom: 12px;
         padding-left: 15px;
@@ -234,7 +204,6 @@
     }
 
     .rightImg {
-        /* width: 50% !important; */
         height: auto;
         padding-bottom: 12px;
         padding-left: 15px;
@@ -263,7 +232,6 @@
     }
 
     .rightImg {
-        /* width: 50% !important; */
         height: auto;
         padding-bottom: 12px;
         padding-left: 15px;
@@ -312,9 +280,6 @@
 
     }
 
-    /* .aboutwidth{
-      width: 100%;
-    } */
     .aboutFifty {
         width: 50% !important;
         float: left;
@@ -338,9 +303,6 @@
         width: 100%;
     }
 
-    /* .aboutwidth{
-      width: 100%;
-    } */
     .rightImg {
         width: 100%;
         height: auto;
@@ -366,11 +328,7 @@
         padding-bottom: 15px;
     }
 
-    /* .aboutwidth{
-      width: 100%;
-    } */
     .aboutFifty {
-        /* padding: 0px 15px; */
         width: 100% !important;
     }
 
@@ -431,7 +389,6 @@
     }
 
     .aboutFifty {
-        /* padding: 0px 15px; */
         width: 100% !important;
     }
 
@@ -441,41 +398,6 @@
     }
 }
 
-/* @media (min-width: 1200px){
-  .aboutwidth {
-      width: 1170px !important;
-      margin-left: auto;
-      margin-right: auto;
-  } 
-  }*/
-/* .aboutMargin{
-    margin-left: auto;
-    margin-right: auto;
-  } */
-
-/* @media (min-width: 992px){
-  .aboutwidth {
-      width: 970px !important;
-      margin-left: auto;
-      margin-right: auto;
-  }
-  } */
-/* .aboutMargin{
-    margin-left: auto;
-    margin-right: auto;
-  } */
-
-/* @media (min-width: 768px){
-  .aboutwidth {
-      width: 750px !important;
-      margin-left: auto;
-      margin-right: auto;
-  } */
-/* .aboutMargin{
-    margin-left: auto;
-    margin-right: auto;
-  } 
-  }*/
 @media only screen and (max-width: 320px) {
     .fiftyImg {
         width: 50%;
@@ -581,11 +503,11 @@
 
 .slick-next {
     z-index: 10;
-    right: 10px !important;
+    right: 18px !important;
 }
 
 .slick-prev:before,
 .slick-next:before {
-    color: #ed1564 !important;
-    font-size: 26px !important;
+    color: #fff !important;
+    font-size: 30px !important;
 }
