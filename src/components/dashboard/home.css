@@ -511,3 +511,17 @@
     color: #fff !important;
     font-size: 30px !important;
 }
+
+.card {
+    animation: rotate 4s ease infinite;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+@keyframes rotate {
+
+    8%,
+    to {
+        transform: rotateY(360deg);
+    }
+}

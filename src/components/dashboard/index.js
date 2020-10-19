@@ -3,6 +3,7 @@ import { withStyles, Typography, CardActionArea, CardMedia, Card, CardContent, C
 import Slider from "react-slick";
 import "./home.css"
 // {* -------------Dashboard  import  compoents -------------*}
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 import {
     Grid,
@@ -170,14 +171,16 @@ const useStyles = theme => ({
         borderRadius: "20px",
         borderBottom: "4px solid #81334b",
         "&:hover": {
-            background: " #ed45a0",
+            background: "#ed45a0",
+            transform: "scale(1.05)",
+            transition: "all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1.4)",
         }
     }, sndImg: {
-        height: "160px",
+        height: "200px",
         width: "100%",
         objectFit: "cover",
         [theme.breakpoints.down('xs')]: {
-            height: "380px",
+            height: "400px",
         }
     },
     sndcard: {
@@ -186,10 +189,11 @@ const useStyles = theme => ({
         textAlign: "center",
         margin: "0px 3%",
         borderRadius: 12,
-        marginTop: "-185px",
+        marginTop: "-220px",
         position: "relative",
+        boxShadow: "0 3px 5px 0 #00BCD4",
         [theme.breakpoints.down('xs')]: {
-            marginTop: "-350px",
+            marginTop: "-420px",
         }
     },
     scndt: {
@@ -216,14 +220,20 @@ const useStyles = theme => ({
         }
     },
     cards: {
-        boxShadow: "0 30px 35px 0 rgba(0, 0, 0, 0.06)",
-        borderRadius: 12,
+        boxShadow: "-7px 7px 1px rgba(0, 0, 0, 0.3)",
+        borderRadius: 25,
         padding: 12,
         marginBottom: 80,
         marginTop: 80,
+        
         [theme.breakpoints.down('xs')]: {
             marginBottom: 10,
-            marginTop: 10,
+            marginTop: 30,
+        },
+        "&:hover": {
+            transform: "scale(1.03)",
+            transition: "all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1.4)",
+            cursor: "pointer"
         }
     }, cardbody: {
         height: 150
@@ -243,13 +253,17 @@ const useStyles = theme => ({
         fontWeight: "bold",
         color: "#fff",
         fontSize: 60,
-        textAlign: "center"
+        textAlign: "center",
+        textShadow: "0 0 5px rgba(0, 0, 0, 0.2)",
+        filter: "drop-shadow(-6.4px 6.2px 8px rgba(0, 0, 0, 0.6))"
     }, vsnTitleone: {
         fontWeight: "bold",
         color: "#000",
         fontSize: 40,
         textAlign: "center",
-        marginTop: 20
+        marginTop: 30,
+        filter: "drop-shadow(-6.4px 6.2px 8px rgba(0, 0, 0, 0.4))",
+        marginBottom: 10,
     }, vsnTitledis: {
         fontWeight: "bold",
         color: "#000",
@@ -283,7 +297,7 @@ const useStyles = theme => ({
         height: "600px",
         [theme.breakpoints.up('md')]: {
             height: "900px",
-        }
+        },
     }, vsnTitl: {
         fontWeight: "bold",
         color: "#000",
@@ -292,22 +306,61 @@ const useStyles = theme => ({
         marginBottom: 12,
     },
     vsncards: {
-        boxShadow: "0 30px 35px 0 rgba(0, 0, 0, 0.06)",
+        boxShadow: "0 45px 100px rgba(14,21,47,0.4), 0 16px 40px rgba(14,21,47,0.4)",
         background: "#d8e9ff",
         padding: 8,
         margin: 12,
         borderRadius: 12,
-        lineHeight: 2
+        lineHeight: 2,
+        "&:hover": {
+            transform: "scale(1.05)",
+            transition: "all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1.4)",
+            cursor: "pointer"
+        }
     }, li: {
         fontWeight: "bold",
         color: "#000",
         fontSize: 17,
         padding: "0px 8px"
     },
+    vsnDistitle: {
+        fontWeight: "bold",
+        color: "#000",
+        fontSize: 20,
+        textAlign: "center",
+        marginTop: 30,
+    }, vsncrdsbtn: {
+        marginTop: 30,
+        background: "#3498db",
+        color: "#fff",
+        border: "none",
+        borderRadius: 20,
+        fontSize: 24,
+        padding: "12px 30px",
+        margin: "auto",
+        display: "block",
+        boxShadow: "0 30px 35px 0 rgba(0, 0, 0, 0.06)",
+        borderBottom: "4px solid #2a6049",
+        textTransform: "unset",
+        fontWeight: 600,
+        "&:hover": {
+            background: "#3498db",
+            transform: "scale(1.03)",
+            transition: "all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1.4)",
+        }
+    },
     imgsback: {
+        marginTop: 40,
+        [theme.breakpoints.only('xs')]: {
+            marginTop: 60,
+        },
         backgroundImage: 'url("https://static.wixstatic.com/media/2e92df_8fed849c70034d8e94f783d8c569a45c~mv2.jpg/v1/fill/w_1899,h_1328,al_c,q_90,usm_0.66_1.00_0.01/2e92df_8fed849c70034d8e94f783d8c569a45c~mv2.webp")',
-        padding: 20,
+        padding: "40px 20px",
         backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+    }, subicon: {
+        fontSize: "30px",
+        marginBottom: "-6px",
     }
 });
 
@@ -386,26 +439,35 @@ class Dashboard extends React.Component {
 
                                     <Typography className={classes.vsnTitlesubdis}>Subscription</Typography>
                                     <Typography className={classes.vsnTitlesubdisone}>
-                                        <li>Daily plan: Delivery opted for all 30 days of your subscription.</li>
-                                        <li>Weekdays: Milk will be delivered to you only during weekdays (i.e.) except Saturdays and Sundays.</li>
-                                        <li>AboutFiftyAlternative days: Milk will be delivered to you on Alternative days starting from the date of your choice!</li>
-                                        <li>Tuesdays, Thursdays, and Saturdays: You will get your milk only on these days, (Note: Starting date of delivery will be chosen based on the nearest day of choice (i.e,) nearest Tuesday, Thursday, or Saturday of subscription payment</li>
+                                        <li><span style={{ marginLeft: "-10px" }}>Daily plan: <span style={{ fontWeight: 500, fontSize: 17 }}>Delivery opted for all 30 days of your subscription.</span></span></li>
+                                        <li><span style={{ marginLeft: "-10px" }}>Weekdays:<span style={{ fontWeight: 500, fontSize: 17 }}> Milk will be delivered to you only during weekdays (i.e.) except Saturdays and Sundays.</span></span></li>
+                                        <li><span style={{ marginLeft: "-10px" }}>AboutFiftyAlternative days: <span style={{ fontWeight: 500, fontSize: 17 }}>Milk will be delivered to you on Alternative days starting from the date of your choice!.</span></span></li>
+                                        <li><span style={{ marginLeft: "-10px" }}>Tuesdays, Thursdays, and Saturdays: <span style={{ fontWeight: 500, fontSize: 17 }}>You will get your milk only on these days, (Note: Starting date of delivery will be chosen based on the nearest day of choice (i.e,) nearest Tuesday, Thursday, or Saturday of subscription payment.</span></span></li>
                                     </Typography>
+                                    <Typography className={classes.vsnDistitle}>Now that you've come this far, try a sample of our farm fresh, creamy, A2 milk</Typography>
+                                    <br />
+                                    <Button
+                                        className={classes.vsncrdsbtn}
+                                        variant="contained"
+                                        size="small"
+                                        color="primary"
+                                    >
+                                        Subscribe now  <NavigateNextIcon className={classes.subicon} /></Button>
                                 </Grid>
                             </Grid>
                         </Grid>
                         <Grid item xs={12} lg={4}>
-                            <Card className={classes.vsncards}>
+                            <Card className={`${classes.vsncards}`}>
                                 <Typography className={classes.vsnTitl}>Areas of Service</Typography>
                                 <Grid container>
                                     <Grid item xs={6}>
                                         {homePage?.list?.list1.map(l => {
-                                            return <li className={classes.li}>{l}</li>
+                                            return <li className={classes.li}><span style={{ marginLeft: "-10px" }}>{l}</span></li>
                                         })}
                                     </Grid>
                                     <Grid item xs={6}>
                                         {homePage?.list?.list2.map(l => {
-                                            return <li className={classes.li}>{l}</li>
+                                            return <li className={classes.li}><span style={{ marginLeft: "-10px" }}>{l}</span></li>
                                         })}
                                     </Grid>
                                 </Grid>
@@ -418,7 +480,7 @@ class Dashboard extends React.Component {
                     <Grid container spacing={2}>
                         {homePage?.cards?.data.map(val => {
                             return <Grid item xs={12} sm={6} md={4} lg={4}>
-                                <Card className={classes.cards}>
+                                <Card className={`card ${classes.cards}`}>
                                     <CardActionArea>
                                         <CardMedia
                                             component="img"
@@ -440,7 +502,7 @@ class Dashboard extends React.Component {
                                             size="small"
                                             color="primary"
                                         >
-                                            Subscribe now ! </Button>
+                                            Subscribe now <NavigateNextIcon />   </Button>
                                     </CardActions>
                                 </Card>
                             </Grid>
