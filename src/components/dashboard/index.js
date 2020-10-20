@@ -481,14 +481,18 @@ const useStyles = theme => ({
         padding: 6,
         borderRadius: 20,
         border: "1.5px solid #3a913f",
-        color: " #3a913f",
+        color: "#3a913f",
         outline: "none",
         width: "max-content",
         boxShadow: "2px 2px 6px -1px #3d3d3d",
         fontWeight: 600,
-        display: "flex"
+        display: "flex",
+        fontSize: 14,
+        [theme.breakpoints.only('xs')]: {
+            fontSize: 12,
+        },
     }
-});
+});  
 
 // InitialState
 const initialState = {
