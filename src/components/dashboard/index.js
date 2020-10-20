@@ -341,7 +341,7 @@ const useStyles = theme => ({
     }, vsnTitlse: {
         fontWeight: "bold",
         color: "#000",
-        fontSize: 60,
+        fontSize: 50,
         textAlign: "center",
         textShadow: "0 0 5px rgba(0, 0, 0, 0.2)",
         filter: "drop-shadow(-6.4px 6.2px 8px rgba(0, 0, 0, 0.6))",
