@@ -315,10 +315,8 @@ const useStyles = theme => ({
     }, vsnimg: {
         width: "100%",
         objectFit: "cover",
-        height: "600px",
-        [theme.breakpoints.up('md')]: {
-            height: "900px",
-        },
+        height: "100%",
+       
     }, vsnTitl: {
         fontWeight: "bold",
         color: "#000",
@@ -341,11 +339,8 @@ const useStyles = theme => ({
     }, li: {
         fontWeight: "bold",
         color: "#000",
-        fontSize: 17,
+        fontSize: 15,
         padding: "0px 8px",
-        [theme.breakpoints.down('xs')]: {
-            fontSize: 15,
-        },
     },
     vsnDistitle: {
         fontWeight: "bold",
