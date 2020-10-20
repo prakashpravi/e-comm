@@ -344,15 +344,21 @@ const useStyles = theme => ({
         fontSize: 60,
         textAlign: "center",
         textShadow: "0 0 5px rgba(0, 0, 0, 0.2)",
-        filter: "drop-shadow(-6.4px 6.2px 8px rgba(0, 0, 0, 0.6))"
+        filter: "drop-shadow(-6.4px 6.2px 8px rgba(0, 0, 0, 0.6))",
+        [theme.breakpoints.down('xs')]: {
+            fontSize: 40,
+        },
     },
     vsnTitle: {
         fontWeight: "bold",
         color: "#fff",
-        fontSize: 60,
+        fontSize: 70,
         textAlign: "center",
         textShadow: "0 0 5px rgba(0, 0, 0, 0.2)",
-        filter: "drop-shadow(-6.4px 6.2px 8px rgba(0, 0, 0, 0.6))"
+        filter: "drop-shadow(-6.4px 6.2px 8px rgba(0, 0, 0, 0.6))",
+        [theme.breakpoints.down('xs')]: {
+            fontSize: 50,
+        }
     }, vsnTitleone: {
         fontWeight: "bold",
         color: "#000",
