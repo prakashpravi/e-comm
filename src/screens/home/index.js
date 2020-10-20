@@ -11,20 +11,14 @@ import Dashboard from "../../components/dashboard/index"
 import Login from "../login/index";
 import Signup from "../signup/index";
 import About from "../../components/about/index";
-import Sidenavlinks from "../../components/sidenavlinks/index"
+import Sidenavlinks from "../../components/sidenavlinks/index";
+import Footer from "../../components/footer/index"
 // {*----------home page parent components style-----------*}
 
 const useStyles = theme => ({
     desktopNavbar: {
         width: "100%"
     },
-    componentContainer: {
-        height: "calc(100vh - 70px)",
-        width: "100%",
-        overflow: "auto",
-        margin: 0,
-        padding: 0
-    }
 });
 
 class Home extends React.Component {
@@ -51,20 +45,23 @@ class Home extends React.Component {
         const { classes } = this.props;
         return (
             <Grid container justify="center" alignItems="center">
-                <Grid item className={classes.desktopNavbar}>
-
+                <Grid item container className={classes.desktopNavbar}>
                     {/* // {*----------home page topnavbar component-----------*} */}
                     <Navbar
                         {...this.props}
                     />
-                    <Sidenavlinks />
+                    <Sidenavlinks {...this.props} />
                 </Grid>
-                <Grid item container>
-                    <Grid item className={classes.componentContainer}>
+                <Grid item container className={classes.desktopNavbar}>
 
-                        {/* // {*----------home page  components-----------*} */}
-                        {this.giveMeComponentToRender()}
-                    </Grid>
+                    {/* // {*----------home page components-----------*} */}
+                    {this.giveMeComponentToRender()}
+
+                </Grid>
+                <Grid item container className={classes.desktopNavbar}>
+                    {/* // {*----------home page footer components-----------*} */}
+                    <Footer
+                    />
                 </Grid>
             </Grid>
         );

@@ -100,11 +100,8 @@ class Sidenavlinks extends React.Component {
             prevPath: ""
         };
     }
-
     render() {
-
         const { classes } = this.props;
-
         return (
             <div className={classes.root}>
                 <Grid justify="center" alignItems="center">
