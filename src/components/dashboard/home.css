@@ -512,7 +512,7 @@
     font-size: 30px !important;
 }
 
-.card {
+/* .card {
     animation: rotate 4s ease infinite;
     transform-style: preserve-3d;
     backface-visibility: hidden;
@@ -524,4 +524,4 @@
     to {
         transform: rotateY(360deg);
     }
-}
+} */

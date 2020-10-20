@@ -30,15 +30,15 @@ const homePage = {
             swipe: false
         },
         "data": [
-            { img: "https://www.annammilk.com/uploads/banner2.jpg" },
+            { img: "assets/images/home_slider/DSC_0446.JPG" },
             {
-                img: "https://www.annammilk.com/uploads/banner3.jpg",
+                img: "assets/images/home_slider/DSC_0605-min.JPG",
             },
             {
-                img: "https://www.annammilk.com/uploads/banner4.jpg",
+                img: "assets/images/home_slider/5-min.JPG",
             },
             {
-                img: "https://www.annammilk.com/uploads/banner5.jpg",
+                img: "assets/images/home_slider/DSC_0434-min.JPG",
             },
         ]
     },
@@ -133,7 +133,25 @@ const homePage = {
             "Virugambakkam",
             "West Mambalam"
         ]
-    }
+    },
+    "Subscription": [
+        {
+            name: "Daily plan :",
+            dis: "Delivery opted for all 30 days of your subscription."
+        },
+        {
+            name: "Weekdays :",
+            dis: "Milk will be delivered to you only during weekdays (i.e.) except Saturdays and Sundays."
+        },
+        {
+            name: "AboutFiftyAlternative days :",
+            dis: "Milk will be delivered to you on Alternative days starting from the date of your choice!."
+        },
+        {
+            name: "Tuesdays, Thursdays, and Saturdays:",
+            dis: "You will get your milk only on these days, (Note: Starting date of delivery will be chosen based on the nearest day of choice (i.e,) nearest Tuesday, Thursday, or Saturday of subscription payment."
+        }
+    ]
 }
 const useStyles = theme => ({
     root: {
@@ -225,7 +243,7 @@ const useStyles = theme => ({
         padding: 12,
         marginBottom: 80,
         marginTop: 80,
-        
+
         [theme.breakpoints.down('xs')]: {
             marginBottom: 10,
             marginTop: 30,
@@ -312,11 +330,11 @@ const useStyles = theme => ({
         margin: 12,
         borderRadius: 12,
         lineHeight: 2,
-        "&:hover": {
-            transform: "scale(1.05)",
-            transition: "all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1.4)",
-            cursor: "pointer"
-        }
+        // "&:hover": {
+        //     transform: "scale(1.05)",
+        //     transition: "all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1.4)",
+        //     cursor: "pointer"
+        // }
     }, li: {
         fontWeight: "bold",
         color: "#000",
@@ -389,13 +407,14 @@ class Dashboard extends React.Component {
                         <Slider ref={c => (this.slider = c)} {...settings}>
                             {homePage.carousel.data.map((val, index) => (
                                 <>
-                                    <Grid container key={index} style={{ height: "500px" }}>
-                                        <a style={{ width: "100%", height: "100%" }}>
+                                    <Grid container key={index} style={{ height: "600px" }}>
+                                        <span style={{ width: "100%", height: "100%" }}>
                                             <img
+                                            alt="img"
                                                 src={val.img}
                                                 style={{ width: "100%", objectFit: "cover", height: "100%" }}
                                             />
-                                        </a>
+                                        </span>
 
                                     </Grid>
                                 </>
@@ -414,7 +433,7 @@ class Dashboard extends React.Component {
                 </Grid>
                 <Grid container>
                     <Grid item xs={12}>
-                        <img className={classes.sndImg} src="https://static.wixstatic.com/media/2e92df_f92a273c2e1041a0b33e12316aafc2eb~mv2.png/v1/fill/w_1899,h_179,al_c,q_85,usm_0.66_1.00_0.01/2e92df_f92a273c2e1041a0b33e12316aafc2eb~mv2.webp" />
+                        <img alt="img" className={classes.sndImg} src="https://static.wixstatic.com/media/2e92df_f92a273c2e1041a0b33e12316aafc2eb~mv2.png/v1/fill/w_1899,h_179,al_c,q_85,usm_0.66_1.00_0.01/2e92df_f92a273c2e1041a0b33e12316aafc2eb~mv2.webp" />
                         <div className={classes.sndcard}>
                             <Typography className={classes.scndt}>Who we are</Typography>
                             <Typography className={classes.scndb}>We at O2 Native Cow milk aim for the production of native farm fresh cow milk and nutritious organic products such as honey, ghee, vegetables and other goodies. Being Farmers by profession since three generations and ten whole decades! ,we toil to produce inconsistent, unadulterated native cow milk and organic products in traditional methods that date back to almost five centuries!</Typography>
@@ -428,7 +447,7 @@ class Dashboard extends React.Component {
                             <Typography className={classes.vsnDis}>O2 Native Cow milk aim for the production of native farm fresh cow milk and nutritious organic products such as honey, ghee, vegetables and other goodies</Typography>
                             <Grid container>
                                 <Grid item xs={12} sm={4}>
-                                    <img className={classes.vsnimg} src="https://static.wixstatic.com/media/2e92df_5cb375fc674b4ee38c061b844bfd4a24~mv2.png/v1/fill/w_750,h_780,al_c,q_90,usm_0.66_1.00_0.01/Bottle%20compressed-min.webp" />
+                                    <img alt="img" className={classes.vsnimg} src="https://static.wixstatic.com/media/2e92df_5cb375fc674b4ee38c061b844bfd4a24~mv2.png/v1/fill/w_750,h_780,al_c,q_90,usm_0.66_1.00_0.01/Bottle%20compressed-min.webp" />
                                 </Grid>
                                 <Grid item xs={12} sm={8}>
                                     <Typography className={classes.vsnTitleone}>Subscription at your comfort!</Typography>
@@ -439,10 +458,9 @@ class Dashboard extends React.Component {
 
                                     <Typography className={classes.vsnTitlesubdis}>Subscription</Typography>
                                     <Typography className={classes.vsnTitlesubdisone}>
-                                        <li><span style={{ marginLeft: "-10px" }}>Daily plan: <span style={{ fontWeight: 500, fontSize: 17 }}>Delivery opted for all 30 days of your subscription.</span></span></li>
-                                        <li><span style={{ marginLeft: "-10px" }}>Weekdays:<span style={{ fontWeight: 500, fontSize: 17 }}> Milk will be delivered to you only during weekdays (i.e.) except Saturdays and Sundays.</span></span></li>
-                                        <li><span style={{ marginLeft: "-10px" }}>AboutFiftyAlternative days: <span style={{ fontWeight: 500, fontSize: 17 }}>Milk will be delivered to you on Alternative days starting from the date of your choice!.</span></span></li>
-                                        <li><span style={{ marginLeft: "-10px" }}>Tuesdays, Thursdays, and Saturdays: <span style={{ fontWeight: 500, fontSize: 17 }}>You will get your milk only on these days, (Note: Starting date of delivery will be chosen based on the nearest day of choice (i.e,) nearest Tuesday, Thursday, or Saturday of subscription payment.</span></span></li>
+                                        {homePage?.Subscription?.map(item => {
+                                            return <li><span style={{ marginLeft: "-10px" }}>{item.name}<span style={{ fontWeight: 500, fontSize: 16, fontStyle: "italic" }}>&nbsp;{item.dis}</span></span></li>
+                                        })}
                                     </Typography>
                                     <Typography className={classes.vsnDistitle}>Now that you've come this far, try a sample of our farm fresh, creamy, A2 milk</Typography>
                                     <br />
@@ -452,7 +470,7 @@ class Dashboard extends React.Component {
                                         size="small"
                                         color="primary"
                                     >
-                                        Subscribe now  <NavigateNextIcon className={classes.subicon} /></Button>
+                                        Subscribe Now  <NavigateNextIcon className={classes.subicon} /></Button>
                                 </Grid>
                             </Grid>
                         </Grid>

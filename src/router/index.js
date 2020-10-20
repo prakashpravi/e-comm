@@ -9,9 +9,7 @@ import routes from "./routes"; //all routes
 
 //Screens
 import {
-    Signup,
     Home,
-    Login
 } from "./../screens";
 
 //Not Found Screen
@@ -22,9 +20,10 @@ export const RouterApp = (props) => {
         <Router>
             <Switch>
                 <Redirect exact path="/" to={routes.login} />
-                <Route exact component={Signup} path={routes.signup} />
-                <Route exact component={Login} path={routes.login} />
+                <Route exact component={Home} path={routes.signup} />
+                <Route exact component={Home} path={routes.login} />
                 <Route exact component={Home} path={routes.home} />
+                <Route exact component={Home} path={routes.about} />
             </Switch>
         </Router>
     )

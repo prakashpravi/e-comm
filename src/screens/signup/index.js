@@ -19,14 +19,12 @@ const useStyles = theme => ({
     justifyContent: "center"
   },
   paper: {
-    margin: theme.spacing(8, 4),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     boxShadow: "inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(63, 40, 3, 0.7)",
     color: " #555555",
     borderRadius: 12,
-    margin: "auto",
     padding: 20,
     margin: 20,
   },

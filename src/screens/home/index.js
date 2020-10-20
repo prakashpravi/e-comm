@@ -2,30 +2,33 @@ import React from "react";
 
 // {*----------home page parent components imports-----------*}
 
-import { Grid, Hidden } from "@material-ui/core";
-import { Navbar, SideMenu } from "../../components";
+import { Grid } from "@material-ui/core";
+import { Navbar } from "../../components";
 import { withRouter } from "react-router-dom";
 import withStyles from '@material-ui/core/styles/withStyles';
 import routes from './../../router/routes';
 import Dashboard from "../../components/dashboard/index"
-import Login from "../login/index"
+import Login from "../login/index";
+import Signup from "../signup/index";
+import About from "../../components/about/index";
+
 // {*----------home page parent components style-----------*}
 
 const useStyles = theme => ({
-    desktopNavbar: { 
+    desktopNavbar: {
         width: "100%"
-    }, 
+    },
     desktopSidebar: {
-        width: 200 
+        width: 200
     },
     desktopSidebarContainer: {
         width: "100%",
- 
+
     },
     appDesktopContainer: {
         marginLeft: 200
     },
-  
+
     componentContainer: {
         height: "calc(100vh - 70px)",
         width: "100%",
@@ -46,8 +49,12 @@ class Home extends React.Component {
     giveMeComponentToRender = (auth) => {
         if (this.props.match.path === routes.home) {
             return <Dashboard {...this.props} />;
-        }else if (this.props.match.path === routes.login) {
+        } else if (this.props.match.path === routes.login) {
             return <Login {...this.props} />;
+        } else if (this.props.match.path === routes.signup) {
+            return <Signup {...this.props} />;
+        } else if (this.props.match.path === routes.about) {
+            return <About {...this.props} />;
         }
     };
     toogleDrawer = () => false;
