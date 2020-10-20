@@ -15,7 +15,8 @@ const useStyles = theme => ({
         background: '#fff',
         alignItems: "center",
         // display: "flex",
-        height: "100vh",
+        width: "100%",
+        padding:"50px 0px",
         justifyContent: "center"
     },
     paper: {

@@ -24,7 +24,7 @@ const useStyles = theme => ({
     // display: "flex",
     height: "auto",
     justifyContent: "center",
-    marginTop: -30
+    width: "100%",
   },
   paper: {
     display: 'flex',

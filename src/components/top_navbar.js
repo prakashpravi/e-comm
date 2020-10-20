@@ -94,7 +94,7 @@ const Navbar = props => {
   return (
     <div className={classes.root}>
       {/* // {* -------------topnavbar  componts -------------*} */}
-      <AppBar position="static" style={{ background: "#3E4958" }}>
+      <AppBar position="fixed" style={{ background: "#3E4958" }}>
         <Container>
           <Toolbar>
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
