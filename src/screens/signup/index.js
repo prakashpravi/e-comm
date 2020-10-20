@@ -225,7 +225,6 @@ class Signup extends React.Component {
                       label="Subcription Starting Date"
                       value={date}
                       onChange={e => this.handleChange("date", e.target.value)}
-                      autoOk
                       inputVariant={"outlined"}
                       style={{ width: "100%", margin: 0 }}
                       KeyboardButtonProps={{
