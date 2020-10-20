@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Typography, Grid } from "@material-ui/core";
 import { withRouter } from "react-router-dom";
 import withStyles from '@material-ui/core/styles/withStyles';
-
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 const useStyles = theme => ({
     root: {
@@ -30,6 +30,20 @@ const useStyles = theme => ({
     }, copyright: {
         paddingTop: "5rem",
         textAlign: "center"
+    }, avatar: {
+        height: "50px",
+        width: "50px",
+
+        marginTop: -90,
+        position: "absolute",
+        background: "#fff",
+        borderRadius: "50%",
+        color: "#000",
+        textAlign: "center",
+        alignItems: "center",
+        marginLeft: "46%",
+        cursor: "pointer"
+
     }
 });
 
@@ -40,11 +54,16 @@ class Footer extends React.Component {
             prevPath: ""
         };
     }
+    scroll = () => {
+        window.scrollTo(0, 0)
+    }
     render() {
-        const { classes } = this.props; 
+        const { classes } = this.props;
         return (
             <div className={classes.root}>
-               
+                <div className={classes.avatar} onClick={() => this.scroll()}>
+                    <ExpandLessIcon style={{ marginTop: 4 }} />
+                </div>
                 <Container>
                     <Grid container spacing={2}
                         direction="row"
