@@ -261,7 +261,12 @@ const useStyles = theme => ({
         color: "#000000",
         fontSize: 13,
         lineHeight: "1.4em"
-    },
+    }, abt: {
+        padding: "60px 30px",
+        [theme.breakpoints.down('xs')]: {
+            padding: "60px 10px",
+        },
+    }
 });
 
 // InitialState
@@ -300,7 +305,7 @@ class About extends React.Component {
                                 <Card className={`card ${classes.cards}`}>
                                     <CardActionArea>
                                         <CardMedia
-                                          alt="img"  component="img"
+                                            alt="img" component="img"
                                             height="200"
                                             image={val.img}
                                             style={{ borderRadius: 12 }}
@@ -317,10 +322,8 @@ class About extends React.Component {
                         })}
                     </Grid>
                     <br /> </Container>
-                <div style={{
+                <div className={classes.abt} style={{
                     background: "#369add",
-                    width: "100%",
-                    padding: " 60px 0px",
                 }}>
                     <Grid container >
                         <Grid item xs={12} sm={6}>
@@ -345,9 +348,7 @@ class About extends React.Component {
                 </div>
                 <div style={{
                     background: "#fff",
-                    width: "100%",
-                    padding: "60px 0px",
-                }}>
+                }} className={classes.abt}>
                     <Grid container >
                         <Grid item xs={12} sm={6} style={{ margin: "auto" }}>
                             <div className={classes.about}>

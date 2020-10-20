@@ -52,7 +52,8 @@ const useStyles = theme => ({
     },
     letter: {
         color: "#80B500",
-        cursor: "pointer"
+        cursor: "pointer",
+        marginTop: 7,
     }, resetspass: {
         borderRadius: 8,
         boxShadow: "0 3px 6px 0 rgba(0, 0, 0, 0.16)",
@@ -76,7 +77,10 @@ const useStyles = theme => ({
             textTransform: "capitalize",
             fontWeight: 600,
             fontSize: 16,
-        }
+        },
+        [theme.breakpoints.down('xs')]: {
+            marginTop: 20,
+        },
     },
     title: {
         width: "100%",
@@ -150,7 +154,7 @@ class Login extends React.Component {
                         Login</h3>
                     <Grid container component="main" >
                         <Grid item xs={12} sm={12} md={12} lg={12}>
-                            <Typography className={classes.discription} variant="body1">{"You can Login if you are a Subscriber to Annam Native Cow Milk."}</Typography>
+                            <Typography className={classes.discription} variant="body1">{"You can Login if you are a Subscriber to 02 Native Cow Milk."}</Typography>
 
                             <TextField size="small" label="Mobile Number" variant="outlined" type="text" className={classes.input} />
                             <TextField size="small" label="Password" variant="outlined" className={classes.input} />
@@ -176,7 +180,7 @@ class Login extends React.Component {
                             >
                                 <Grid><div className={classes.letter}>Forgot password?<b onClick={() => this.handleClose()}> Reset Password</b></div></Grid>
                                 <Grid><div className={classes.letter}>New to O2 Native Cow Milk?<b onClick={() => this.props.history.push("/signin")}> Sign Up</b></div></Grid>
-                                <Grid> <Button
+                                <Grid style={{ margin: "auto" }}> <Button
                                     type="submit"
                                     fullWidth
                                     variant="contained"
@@ -187,7 +191,7 @@ class Login extends React.Component {
                                 </Button> </Grid>
                             </Grid>
                         </Grid>
-                    </Grid>
+                    </Grid><br />
                 </div>
             </Grid>
         );
