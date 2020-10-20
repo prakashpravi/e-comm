@@ -11,7 +11,7 @@ import Dashboard from "../../components/dashboard/index"
 import Login from "../login/index";
 import Signup from "../signup/index";
 import About from "../../components/about/index";
-
+import Sidenavlinks from "../../components/sidenavlinks/index"
 // {*----------home page parent components style-----------*}
 
 const useStyles = theme => ({
@@ -22,8 +22,8 @@ const useStyles = theme => ({
         height: "calc(100vh - 70px)",
         width: "100%",
         overflow: "auto",
-        margin:0,
-        padding:0
+        margin: 0,
+        padding: 0
     }
 });
 
@@ -47,11 +47,8 @@ class Home extends React.Component {
             return <About {...this.props} />;
         }
     };
-    toogleDrawer = () => false;
     render() {
-
         const { classes } = this.props;
-
         return (
             <Grid container justify="center" alignItems="center">
                 <Grid item className={classes.desktopNavbar}>
@@ -60,6 +57,7 @@ class Home extends React.Component {
                     <Navbar
                         {...this.props}
                     />
+                    <Sidenavlinks />
                 </Grid>
                 <Grid item container>
                     <Grid item className={classes.componentContainer}>
