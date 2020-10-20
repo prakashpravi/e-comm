@@ -284,10 +284,11 @@ const useStyles = theme => ({
         }
     },
     scndt: {
-        fontSize: 38,
+        fontSize: 44,
         fontWeight: "bold",
-        color: "#DBDBDB",
-        marginBottom: 12
+        color: "#fff",
+        marginBottom: 12,
+        textShadow: "1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474, -3px 6px 1px #787777",
     },
     scndb: {
         fontWeight: "bold",
@@ -354,7 +355,7 @@ const useStyles = theme => ({
         color: "#fff",
         fontSize: 70,
         textAlign: "center",
-        textShadow: "0 0 5px rgba(0, 0, 0, 0.2)",
+        textShadow: "1px -1px 0 #767676,-1px 2px 1px #737272, -2px 4px 1px #767474, -3px 6px 1px #787777, -4px 8px 1px #7b7a7a",
         filter: "drop-shadow(-6.4px 6.2px 8px rgba(0, 0, 0, 0.6))",
         [theme.breakpoints.down('xs')]: {
             fontSize: 50,
@@ -365,7 +366,7 @@ const useStyles = theme => ({
         fontSize: 40,
         textAlign: "center",
         marginTop: 30,
-        filter: "drop-shadow(-6.4px 6.2px 8px rgba(0, 0, 0, 0.4))",
+        textShadow: "-1px 2px 1px #737272, -2px 4px 1px #767474",
         marginBottom: 10,
     }, vsnTitledis: {
         fontWeight: "bold",
@@ -378,6 +379,8 @@ const useStyles = theme => ({
         fontSize: 28,
         marginTop: 20,
         textDecoration: "underline",
+        textShadow: "-1px 2px 1px #00000033",
+
     },
     vsnTitlesubdisone: {
         fontWeight: "bold",
