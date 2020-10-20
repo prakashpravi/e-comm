@@ -62,6 +62,75 @@ const homePage = {
         ]
     },
     "list": {
+        "all": [
+            "Adambakkam",
+            "Adayar",
+            "Alandur",
+            "Alwarpet",
+            "Ambattur",
+            "Anna Nagar",
+            "Arumbakkam",
+            "Ashok Nagar",
+            "Avadi",
+            "Azhvaar Tirunagar",
+            "Besant Nagar",
+            "Camp Road",
+            "Chetpet",
+            "Choolaimedu",
+            "Chromepet",
+            "Gopalapuram",
+            "Gowriwalkam",
+            "Iyyappanthangal",
+            "K.K Nagar",
+            'Kattupakkam',
+            "Keezhkattalai",
+            "Kilpauk",
+            "Kodambakkam",
+            "Koyambedu",
+            "Kundrathur",
+            "Madipakkam",
+            "Manapakkam",
+            'Mandaveli',
+            "Medavakkam",
+            "Meenambakkam",
+            "Moulivakkam",
+            "MRC Nagar",
+            "Mugalivakkam",
+            "Mugappair",
+            "Mylapore",
+            "Nanganallau",
+            "Nanmagalam",
+            "Nolambur",
+            "Padi",
+            "Pallavaram",
+            "Pallikaranai",
+            "Perambur",
+            "Perungudi",
+            "Poonamallee",
+            "Porur",
+            "Purasavakkam",
+            "RA Puram",
+            "Ramapuram",
+            "Royapettah",
+            "Saaligramam",
+            'Saidapet',
+            "Sanotorium",
+            "Santhome",
+            "Selaiyur",
+            "Sholinganallur",
+            "T.Nagar",
+            "Tambaram",
+            "Thirumangalam",
+            "Thiruvanmiyur",
+            "Vadapalani",
+            'Valasaravakkam',
+            'Vanagaram',
+            "Velachery",
+            "Vengai",
+            "Villivakkam",
+            "Virugambakkam",
+            "West Mambalam"
+        ],
         "list1": [
             "Adambakkam",
             "Adayar",
@@ -269,6 +338,13 @@ const useStyles = theme => ({
         color: "#000000",
         fontSize: 17,
         lineHeight: "1.4em"
+    }, vsnTitlse: {
+        fontWeight: "bold",
+        color: "#000",
+        fontSize: 60,
+        textAlign: "center",
+        textShadow: "0 0 5px rgba(0, 0, 0, 0.2)",
+        filter: "drop-shadow(-6.4px 6.2px 8px rgba(0, 0, 0, 0.6))"
     },
     vsnTitle: {
         fontWeight: "bold",
@@ -311,7 +387,11 @@ const useStyles = theme => ({
         color: "#fff",
         fontSize: 20,
         textAlign: "center",
-        padding: "0px 20px"
+        padding: "0px 20px",
+        margin: "0px 8%",
+        [theme.breakpoints.down('xs')]: {
+            margin: "0px",
+        }
     }, vsnimg: {
         width: "100%",
         objectFit: "cover",
@@ -380,6 +460,14 @@ const useStyles = theme => ({
     }, subicon: {
         fontSize: "30px",
         marginBottom: "-6px",
+    }, chipdiv: {
+        boxShadow: "0px 0.5em 2em -1em #999",
+        padding: "40px 20px",
+        borderRadius: 20,
+        margin: "0px 4%",
+        [theme.breakpoints.only('xs')]: {
+            marginTop: 0,
+        },
     }
 });
 
@@ -443,8 +531,8 @@ class Dashboard extends React.Component {
                 </Grid>
                 <div className={classes.imgsback}>
                     <Grid container>
-                        <Grid item xs={12} lg={8}>
-                            <Typography className={classes.vsnTitle}> Our Vision</Typography>
+                        <Grid item xs={12} lg={12}>
+                            <Typography className={classes.vsnTitle}> Our Vision</Typography><br />
                             <Typography className={classes.vsnDis}>O2 Native Cow milk aim for the production of native farm fresh cow milk and nutritious organic products such as honey, ghee, vegetables and other goodies</Typography>
                             <Grid container>
                                 <Grid item xs={12} sm={4}>
@@ -460,7 +548,9 @@ class Dashboard extends React.Component {
                                     <Typography className={classes.vsnTitlesubdis}>Subscription</Typography>
                                     <Typography className={classes.vsnTitlesubdisone}>
                                         {homePage?.Subscription?.map(item => {
-                                            return <li><span style={{ marginLeft: "-10px" }}>{item.name}<span style={{ fontWeight: 600, fontSize: 14, fontStyle: "italic" }}>&nbsp;{item.dis}</span></span></li>
+                                            return <li><span style={{
+                                                marginLeft: "-10px", letterSpacing: 1, fontSize: 16, fontWeight: "bold",
+                                            }}>{item.name}<span style={{ fontWeight: 600, fontSize: 13 }}>&nbsp;{item.dis}</span></span></li>
                                         })}
                                     </Typography>
                                     <Typography className={classes.vsnDistitle}>Now that you've come this far, try a sample of our farm fresh, creamy, A2 milk</Typography>
@@ -475,7 +565,7 @@ class Dashboard extends React.Component {
                                 </Grid>
                             </Grid>
                         </Grid>
-                        <Grid item xs={12} lg={4}>
+                        {/* <Grid item xs={12} lg={4}>
                             <Card className={`${classes.vsncards}`}>
                                 <Typography className={classes.vsnTitl}>Areas of Service</Typography>
                                 <Grid container>
@@ -491,32 +581,33 @@ class Dashboard extends React.Component {
                                     </Grid>
                                 </Grid>
                             </Card>
-                        </Grid>
+                        </Grid> */}
+                    </Grid>
+                </div><br />
+
+                <Typography className={classes.vsnTitlse}>Areas of Service</Typography>
+                <br />
+                <div className={classes.chipdiv}>
+                    <Grid container spacing={2}>
+                        {homePage?.list?.all.map(l => {
+                            return <Grid item>
+                                <div style={{
+                                    padding: 6,
+                                    borderRadius: 20,
+                                    border: "1.5px solid #3a913f",
+                                    color: " #3a913f",
+                                    outline: "none",
+                                    width: "max-content",
+                                    boxShadow: "2px 2px 6px -1px #3d3d3d",
+                                    fontWeight: 600,
+                                    display: "flex"
+                                }}>
+                                    {l}
+                                </div>
+                            </Grid>
+                        })}
                     </Grid>
                 </div>
-                {/* <br />
-                <Container>
-                    <Grid container spacing={2}>
-                          {[1,2,3,4,5].map(val=>{
-                              return   <Grid item >
-                        <div style={{
-                                padding: 6,
-                                borderRadius: 20,
-                                border: "1.5px solid #3a913f",
-                                color: " #3a913f",
-                                outline: "none",
-                                width: "max-content",
-                                boxShadow: "2px 2px 6px -1px #3d3d3d",
-                                fontWeight: 600,
-                                display:"flex"
-                            }}>
-                                Mugalivakkam
-                            </div>
-                        </Grid>
-                          })}
-                    </Grid>
-                </Container>
-                <br /> */}
                 <Container>
                     <Grid container spacing={2}>
                         {homePage?.cards?.data.map(val => {
