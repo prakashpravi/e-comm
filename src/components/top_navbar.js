@@ -102,7 +102,7 @@ const Navbar = props => {
                 <MenuIcon onClick={() => toggleDrawer()} />
               </Hidden>
             </IconButton>
-            <img src="assets/images/bg_2.png" width="50px" style={{ marginTop: -5 }} />
+            <img alt="img" src="assets/images/bg_2.png" width="50px" style={{ marginTop: -5 }} />
             <Typography variant="h6" className={classes.title}>
               &nbsp;O2 Native Cow Milk</Typography>
             <Hidden smDown>
