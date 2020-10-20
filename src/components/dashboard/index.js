@@ -474,6 +474,16 @@ const useStyles = theme => ({
         [theme.breakpoints.only('xs')]: {
             marginTop: 0,
         },
+    }, chip: {
+        padding: 6,
+        borderRadius: 20,
+        border: "1.5px solid #3a913f",
+        color: " #3a913f",
+        outline: "none",
+        width: "max-content",
+        boxShadow: "2px 2px 6px -1px #3d3d3d",
+        fontWeight: 600,
+        display: "flex"
     }
 });
 
@@ -597,18 +607,8 @@ class Dashboard extends React.Component {
                     <Grid container spacing={2}>
                         {homePage?.list?.all.map(l => {
                             return <Grid item>
-                                <div style={{
-                                    padding: 6,
-                                    borderRadius: 20,
-                                    border: "1.5px solid #3a913f",
-                                    color: " #3a913f",
-                                    outline: "none",
-                                    width: "max-content",
-                                    boxShadow: "2px 2px 6px -1px #3d3d3d",
-                                    fontWeight: 600,
-                                    display: "flex"
-                                }}>
-                                    {l}
+                                <div className={classes.chip}>
+                                    <i class="fa fa-map-marker" style={{ margin: 4 }}></i> {l}
                                 </div>
                             </Grid>
                         })}
