@@ -316,7 +316,7 @@ const useStyles = theme => ({
         width: "100%",
         objectFit: "cover",
         height: "100%",
-       
+
     }, vsnTitl: {
         fontWeight: "bold",
         color: "#000",
@@ -411,7 +411,7 @@ class Dashboard extends React.Component {
                                     <Grid container key={index} style={{ height: "600px" }}>
                                         <span style={{ width: "100%", height: "100%" }}>
                                             <img
-                                            alt="img"
+                                                alt="img"
                                                 src={val.img}
                                                 style={{ width: "100%", objectFit: "cover", height: "100%" }}
                                             />
@@ -494,7 +494,29 @@ class Dashboard extends React.Component {
                         </Grid>
                     </Grid>
                 </div>
-
+                {/* <br />
+                <Container>
+                    <Grid container spacing={2}>
+                          {[1,2,3,4,5].map(val=>{
+                              return   <Grid item >
+                        <div style={{
+                                padding: 6,
+                                borderRadius: 20,
+                                border: "1.5px solid #3a913f",
+                                color: " #3a913f",
+                                outline: "none",
+                                width: "max-content",
+                                boxShadow: "2px 2px 6px -1px #3d3d3d",
+                                fontWeight: 600,
+                                display:"flex"
+                            }}>
+                                Mugalivakkam
+                            </div>
+                        </Grid>
+                          })}
+                    </Grid>
+                </Container>
+                <br /> */}
                 <Container>
                     <Grid container spacing={2}>
                         {homePage?.cards?.data.map(val => {

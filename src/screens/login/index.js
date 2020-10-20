@@ -4,7 +4,7 @@ import React from 'react';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import { Typography, FormControlLabel, Checkbox, TextField, withStyles } from '@material-ui/core';
+import { Typography, Dialog, TextField, withStyles } from '@material-ui/core';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import { withRouter } from "react-router-dom";
 
@@ -14,7 +14,7 @@ const useStyles = theme => ({
     root: {
         background: '#fff',
         alignItems: "center",
-        display: "flex",
+        // display: "flex",
         height: "100vh",
         justifyContent: "center"
     },
@@ -26,7 +26,11 @@ const useStyles = theme => ({
         color: " #555555",
         borderRadius: 12,
         padding: 20,
-        margin: 20,
+        width: "400px",
+        margin: "auto",
+        [theme.breakpoints.down('xs')]: {
+            width: "80%",
+        },
     },
     discription: {
         textAlign: "center",
@@ -49,6 +53,14 @@ const useStyles = theme => ({
     letter: {
         color: "#80B500",
         cursor: "pointer"
+    }, resetspass: {
+        borderRadius: 8,
+        boxShadow: "0 3px 6px 0 rgba(0, 0, 0, 0.16)",
+        textTransform: "capitalize",
+        fontWeight: 600,
+        fontSize: 16,
+        background: "#3E4958",
+        marginTop: 20
     },
     submit: {
         borderRadius: 8,
@@ -71,16 +83,71 @@ const useStyles = theme => ({
         textAlign: "center",
         borderBottom: "4px solid #fff",
         fontSize: "2rem"
+    }, text: {
+        textAlign: "center",
+        fontSize: 40,
+        margin: "30px",
+        [theme.breakpoints.down('xs')]: {
+            fontSize: 30,
+        },
+    }, alert: {
+        textAlign: "center",
+        padding: 12,
+        marginBottom: 20,
+        "& h3": {
+            color: "#000",
+            fontSize: 17,
+            marginTop: 30
+        }
+    }, brdr: {
+        "& .MuiDialog-paperWidthSm": {
+            borderRadius: 20
+        }
     }
 });
-
+// InitialState
+const initialState = {
+    open: false,
+}
+// end
 class Login extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = initialState;
+    }
+
+    handleClose = () => {
+        this.setState({
+            ...this.state,
+            open: !this.state.open
+        })
+    };
     render() {
         const { classes } = this.props;
+        const { open } = this.state;
         return (
             <Grid className={classes.root}>
+                <Dialog onClose={() => this.handleClose()} open={open} className={classes.brdr}>
+                    <div className={classes.alert}>
+                        <img alt="img" src="assets/images/bg_2.png" width="70px" style={{ marginBottom: -23 }} />
+                        <br /><h3>Please enter your mobile number to reset password</h3>
+                        <TextField size="small" label="Mobile Number" variant="outlined" type="text" className={classes.input} />
+                        <Button
+                            type="submit"
+                            fullWidth
+                            variant="contained"
+                            color="primary"
+                            className={classes.resetspass}
+                            onClick={() => this.handleClose()}
+                        >Verify Mobile Number
+                                </Button>
+                    </div>
+                </Dialog>
+                <h3 className={classes.text}>Please login to continue</h3> <br />
                 <div className={classes.paper}>
-                    <h3 className={classes.title}>Login</h3>
+                    <h3 className={classes.title}>
+                        <img alt="img" src="assets/images/bg_2.png" width="70px" style={{ marginBottom: -23 }} />
+                        Login</h3>
                     <Grid container component="main" >
                         <Grid item xs={12} sm={12} md={12} lg={12}>
                             <Typography className={classes.discription} variant="body1">{"You can Login if you are a Subscriber to Annam Native Cow Milk."}</Typography>
@@ -88,7 +155,7 @@ class Login extends React.Component {
                             <TextField size="small" label="Mobile Number" variant="outlined" type="text" className={classes.input} />
                             <TextField size="small" label="Password" variant="outlined" className={classes.input} />
 
-                            <FormControlLabel
+                            {/* <FormControlLabel
                                 control={
                                     <Checkbox
                                         // checked={state.checkedB}
@@ -98,16 +165,17 @@ class Login extends React.Component {
                                     />
                                 }
                                 label="Primary"
-                            />
-                            <Typography className={classes.reset} variant="body1">{"If you forgot your password you can"}<b style={{ color: "#000" }}> reset it.</b></Typography>
-
+                            /> */}
+                            {/* <Typography className={classes.reset} variant="body1">{"Forgot password?"}<b style={{ color: "#000" }}> reset it.</b></Typography> */}
+                            <br /> <br />
                             <Grid
                                 container
                                 direction="row"
                                 justify="space-between"
                                 alignItems="center"
                             >
-                                <Grid><div className={classes.letter}>New user?<b> Sign Up</b></div></Grid>
+                                <Grid><div className={classes.letter}>Forgot password?<b onClick={() => this.handleClose()}> Reset Password</b></div></Grid>
+                                <Grid><div className={classes.letter}>New to O2 Native Cow Milk?<b onClick={() => this.props.history.push("/signin")}> Sign Up</b></div></Grid>
                                 <Grid> <Button
                                     type="submit"
                                     fullWidth
