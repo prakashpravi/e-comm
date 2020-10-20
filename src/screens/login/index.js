@@ -143,7 +143,7 @@ class Login extends React.Component {
                                 </Button>
                     </div>
                 </Dialog>
-                <h3 className={classes.text}>Please login to continue</h3> <br />
+                <h3 className={classes.text}>Please Login to Continue</h3> <br />
                 <div className={classes.paper}>
                     <h3 className={classes.title}>
                         <img alt="img" src="assets/images/bg_2.png" width="70px" style={{ marginBottom: -23 }} />

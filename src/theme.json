@@ -1,17 +1,17 @@
 {
     "palette": {
         "common": {
-            "black": "#000",
-            "white": "#fff"
+            "black": "#fff",
+            "white": "#000"
         },
         "background": {
-            "paper": "#100e1d",
-            "default": "#fafafa"
+            "paper": "#000",
+            "default": "#000"
         },
         "primary": {
-            "light": "#2058f1",
-            "main": "#ffffff",
-            "dark": "linear-gradient(to bottom, #f0f0f0, #ffffff);",
+            "light": "#000",
+            "main": "#000",
+            "dark": "000",
             "contrastText": "#fff"
         },
         "secondary": {

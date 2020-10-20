@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.MuiInputBase-input {
+  color: #000 !important;
+}
+
+.Signup-input-15,
+.Signup-input-18 {
+  margin-top: 0 !important;
+}
+
+.MuiAutocomplete-option {
+  color: #000 !important;
+}

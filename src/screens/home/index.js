@@ -18,22 +18,12 @@ const useStyles = theme => ({
     desktopNavbar: {
         width: "100%"
     },
-    desktopSidebar: {
-        width: 200
-    },
-    desktopSidebarContainer: {
-        width: "100%",
-
-    },
-    appDesktopContainer: {
-        marginLeft: 200
-    },
-
     componentContainer: {
         height: "calc(100vh - 70px)",
         width: "100%",
-        // backgroundColor: theme.palette.primary.dark,
         overflow: "auto",
+        margin:0,
+        padding:0
     }
 });
 
@@ -71,7 +61,7 @@ class Home extends React.Component {
                         {...this.props}
                     />
                 </Grid>
-                <Grid item container className={classes.desktopSidebarContainer}>
+                <Grid item container>
                     <Grid item className={classes.componentContainer}>
 
                         {/* // {*----------home page  components-----------*} */}
