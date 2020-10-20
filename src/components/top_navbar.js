@@ -66,7 +66,28 @@ const Navbar = props => {
       open: !state.open
     })
   }
-
+  const data = [
+    {
+      name: "home",
+      path: "/home"
+    },
+    {
+      name: "about us",
+      path: "/about"
+    },
+    {
+      name: "contact us",
+      path: "/"
+    },
+    {
+      name: "Login",
+      path: "/login"
+    },
+    {
+      name: "cart",
+      path: "/"
+    },
+  ]
   return (
     <div className={classes.root}>
       {/* // {* -------------topnavbar  componts -------------*} */}
@@ -94,9 +115,12 @@ const Navbar = props => {
         <div className={classes.drawer}>
           <HighlightOffIcon className={classes.close} onClick={() => toggleDrawer()} />
           <List>
-            {['home', 'about us', 'contact us', 'Login', 'cart'].map((text) => (
-              <ListItem button key={text} className={classes.text}>
-                <ListItemText primary={text} />
+            {data.map((text) => (
+              <ListItem button key={text.name} className={classes.text} onClick={() => {
+                props.history.push(text.path)
+                toggleDrawer()
+              }}>
+                <ListItemText primary={text.name} />
               </ListItem>
             ))}
           </List>
