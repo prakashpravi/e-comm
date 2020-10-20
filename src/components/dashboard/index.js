@@ -254,7 +254,10 @@ const useStyles = theme => ({
             cursor: "pointer"
         }
     }, cardbody: {
-        height: 150
+        height: 150,
+        [theme.breakpoints.down('xs')]: {
+            height: 180,
+        },
     },
     cardst: {
         fontWeight: "bold",
@@ -339,7 +342,10 @@ const useStyles = theme => ({
         fontWeight: "bold",
         color: "#000",
         fontSize: 17,
-        padding: "0px 8px"
+        padding: "0px 8px",
+        [theme.breakpoints.down('xs')]: {
+            fontSize: 15,
+        },
     },
     vsnDistitle: {
         fontWeight: "bold",
@@ -370,7 +376,7 @@ const useStyles = theme => ({
     imgsback: {
         marginTop: 40,
         [theme.breakpoints.only('xs')]: {
-            marginTop: 60,
+            marginTop: 40,
         },
         backgroundImage: 'url("https://static.wixstatic.com/media/2e92df_8fed849c70034d8e94f783d8c569a45c~mv2.jpg/v1/fill/w_1899,h_1328,al_c,q_90,usm_0.66_1.00_0.01/2e92df_8fed849c70034d8e94f783d8c569a45c~mv2.webp")',
         padding: "40px 20px",
