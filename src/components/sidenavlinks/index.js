@@ -24,7 +24,7 @@ const useStyles = theme => ({
             borderBottomRightRadius: 4,
             width: 150,
             "& span": {
-                margin:"auto",
+                margin: "auto",
                 color: "#fff",
                 display: "block"
             },
@@ -44,7 +44,7 @@ const useStyles = theme => ({
             borderBottomRightRadius: 4,
             width: 150,
             "& span": {
-                margin:"auto",
+                margin: "auto",
                 color: "#fff",
                 display: "block"
             },
@@ -65,7 +65,7 @@ const useStyles = theme => ({
             width: 150,
             "& span": {
                 color: "#fff",
-                margin:"auto",
+                margin: "auto",
                 display: "block"
             },
         },
@@ -75,7 +75,6 @@ const useStyles = theme => ({
         background: "#f0932b",
         borderBottomRightRadius: 20,
         color: "#fff",
-        cursor: "pointer",
         width: 50,
         cursor: "pointer",
         "& span": {
@@ -88,7 +87,7 @@ const useStyles = theme => ({
             "& span": {
                 color: "#fff",
                 display: "block",
-                margin:"auto",
+                margin: "auto",
             },
         },
     }
