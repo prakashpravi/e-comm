@@ -358,7 +358,7 @@ const useStyles = theme => ({
         margin: "auto",
         display: "block",
         boxShadow: "0 30px 35px 0 rgba(0, 0, 0, 0.06)",
-        borderBottom: "4px solid #2a6049",
+        borderBottom: "4px solid #217bb6",
         textTransform: "unset",
         fontWeight: 600,
         "&:hover": {
