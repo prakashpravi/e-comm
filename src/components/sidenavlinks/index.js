@@ -1,12 +1,8 @@
 import React from "react";
-
-// {*----------home page parent components imports-----------*}
-
 import { Grid } from "@material-ui/core";
 import { withRouter } from "react-router-dom";
 import withStyles from '@material-ui/core/styles/withStyles';
 
-// {*----------home page parent components style-----------*}
 
 const useStyles = theme => ({
     root: {
@@ -20,19 +16,19 @@ const useStyles = theme => ({
         color: "#fff",
         width: 50,
         cursor: "pointer",
-
+        "& span": {
+            display: "none"
+        },
         "&:hover": {
             borderTopRightRadius: 4,
             borderBottomRightRadius: 4,
             width: 150,
+            "& span": {
+                margin:"auto",
+                color: "#fff",
+                display: "block"
+            },
         },
-        "&:hover .Sidenavlinks-l-14": {
-            display: "block"
-        },
-    }, l: {
-        display: "none",
-        width: "100px",
-        fontWeight: 600
     },
     list1: {
         padding: 12,
@@ -40,18 +36,19 @@ const useStyles = theme => ({
         color: "#fff",
         width: 50,
         cursor: "pointer",
-
+        "& span": {
+            display: "none"
+        },
         "&:hover": {
-            width: 150,
             borderTopRightRadius: 4,
             borderBottomRightRadius: 4,
+            width: 150,
+            "& span": {
+                margin:"auto",
+                color: "#fff",
+                display: "block"
+            },
         },
-        "&:hover .Sidenavlinks-l1-16": {
-            display: "block"
-        },
-    }, l1: {
-        display: "none",
-        fontWeight: 600
     },
     list2: {
         padding: 12,
@@ -59,17 +56,19 @@ const useStyles = theme => ({
         color: "#fff",
         width: 50,
         cursor: "pointer",
-        "&:hover .Sidenavlinks-l2-18": {
-            display: "block"
+        "& span": {
+            display: "none"
         },
         "&:hover": {
-            width: 150,
             borderTopRightRadius: 4,
             borderBottomRightRadius: 4,
-        }
-    }, l2: {
-        display: "none",
-        fontWeight: 600
+            width: 150,
+            "& span": {
+                color: "#fff",
+                margin:"auto",
+                display: "block"
+            },
+        },
     },
     list3: {
         padding: 12,
@@ -78,17 +77,20 @@ const useStyles = theme => ({
         color: "#fff",
         cursor: "pointer",
         width: 50,
-        "&:hover .Sidenavlinks-l3-20": {
-            display: "block"
+        cursor: "pointer",
+        "& span": {
+            display: "none"
         },
         "&:hover": {
-            width: 150,
             borderTopRightRadius: 4,
             borderBottomRightRadius: 4,
-        }
-    }, l3: {
-        display: "none",
-        fontWeight: 600
+            width: 150,
+            "& span": {
+                color: "#fff",
+                display: "block",
+                margin:"auto",
+            },
+        },
     }
 });
 
@@ -99,7 +101,6 @@ class Sidenavlinks extends React.Component {
             prevPath: ""
         };
     }
-    // {*----------home page inside  child components-----------*}
 
     render() {
 
@@ -109,16 +110,16 @@ class Sidenavlinks extends React.Component {
             <div className={classes.root}>
                 <Grid justify="center" alignItems="center">
                     <div className={classes.list} onClick={() => this.props.history.push("/signin")}>
-                        <span style={{ display: "flex", alignItems: "center" }}><img alt="img" width="40px" src="assets/images/icons/Bottle-Icon.png" /><span className={classes.l}>Subscribe&nbsp;Milk</span></span>
+                        <div style={{ display: "flex", alignItems: "center" }}><img alt="img" width="40px" src="assets/images/icons/Bottle-Icon.png" /><span>Subscribe&nbsp;Milk</span></div>
                     </div>
                     <div className={classes.list1} onClick={() => this.props.history.push("/signin")}>
-                        <span style={{ display: "flex", alignItems: "center" }}><img alt="img" width="40px" src="assets/images/icons/Bottle-Icon.png" /><span className={classes.l1}>Sample&nbsp;Milk</span></span>
+                        <div style={{ display: "flex", alignItems: "center" }}><img alt="img" width="40px" src="assets/images/icons/Bottle-Icon.png" /><span>Sample&nbsp;Milk</span></div>
                     </div>
                     <div className={classes.list2} onClick={() => this.props.history.push("/signin")}>
-                        <span style={{ display: "flex", alignItems: "center" }}><img alt="img" width="40px" src="assets/images/icons/Shopping-Cart.png" /><span className={classes.l2}>Organic&nbsp;Cart</span></span>
+                        <div style={{ display: "flex", alignItems: "center" }}><img alt="img" width="40px" src="assets/images/icons/Shopping-Cart.png" /><span>Organic&nbsp;Cart</span></div>
                     </div>
                     <div className={classes.list3} >
-                        <span style={{ display: "flex", alignItems: "center" }}><img alt="img" width="40px" src="assets/images/icons/Phone.png" /><span className={classes.l3}>Call&nbsp;Back</span></span>
+                        <div style={{ display: "flex", alignItems: "center" }}><img alt="img" width="40px" src="assets/images/icons/Phone.png" /><span>Call&nbsp;Back</span></div>
                     </div>
                 </Grid>
             </div>
