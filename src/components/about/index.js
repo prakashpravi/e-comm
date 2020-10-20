@@ -230,7 +230,7 @@ const useStyles = theme => ({
             fontSize: 42,
         }
     }, cards1: {
-        boxShadow: "-7px 7px 1px rgba(0, 0, 0, 0.3)",
+        boxShadow: "-6px 6px 1px rgba(0, 0, 0, 0.3)",
         borderRadius: 25,
         marginBottom: 80,
         marginTop: 80,

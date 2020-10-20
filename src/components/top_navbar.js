@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     fontWeight: "bold",
     [theme.breakpoints.down('xs')]: {
-      fontSize: 22,
+      fontSize: 18,
     },
   }, li: {
     fontSize: 12,

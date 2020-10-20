@@ -148,7 +148,7 @@ const homePage = {
             dis: "Milk will be delivered to you on Alternative days starting from the date of your choice!."
         },
         {
-            name: "Tuesdays, Thursdays, and Saturdays:",
+            name: "Tuesdays, Thursdays, and Saturdays :",
             dis: "You will get your milk only on these days, (Note: Starting date of delivery will be chosen based on the nearest day of choice (i.e,) nearest Tuesday, Thursday, or Saturday of subscription payment."
         }
     ]
@@ -459,7 +459,7 @@ class Dashboard extends React.Component {
                                     <Typography className={classes.vsnTitlesubdis}>Subscription</Typography>
                                     <Typography className={classes.vsnTitlesubdisone}>
                                         {homePage?.Subscription?.map(item => {
-                                            return <li><span style={{ marginLeft: "-10px" }}>{item.name}<span style={{ fontWeight: 500, fontSize: 16, fontStyle: "italic" }}>&nbsp;{item.dis}</span></span></li>
+                                            return <li><span style={{ marginLeft: "-10px" }}>{item.name}<span style={{ fontWeight: 600, fontSize: 14, fontStyle: "italic" }}>&nbsp;{item.dis}</span></span></li>
                                         })}
                                     </Typography>
                                     <Typography className={classes.vsnDistitle}>Now that you've come this far, try a sample of our farm fresh, creamy, A2 milk</Typography>
