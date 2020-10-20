@@ -53,7 +53,8 @@ const useStyles = theme => ({
   },
   letter: {
     color: "#80B500",
-    cursor: "pointer"
+    cursor: "pointer",
+    fontWeight:"bold"
   },
   submit: {
     borderRadius: 8,
