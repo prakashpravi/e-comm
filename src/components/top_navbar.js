@@ -1,6 +1,6 @@
 import React from 'react';
 // {* -------------topnavbar  import  compoents -------------*}
-import { AppBar, Toolbar, IconButton, Typography, Button, Hidden, Drawer, ListItem, List, ListItemText } from '@material-ui/core';
+import { AppBar, Toolbar, IconButton, Typography, Button, Hidden, Drawer, ListItem, List, ListItemText, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { withRouter } from "react-router-dom";
 import MenuIcon from '@material-ui/icons/Menu';
@@ -26,7 +26,10 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     flexGrow: 1,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 22,
+    },
   }, li: {
     fontSize: 12,
     padding: "8px 26px",
@@ -92,23 +95,25 @@ const Navbar = props => {
     <div className={classes.root}>
       {/* // {* -------------topnavbar  componts -------------*} */}
       <AppBar position="static" style={{ background: "#3E4958" }}>
-        <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <Hidden mdUp>
-              <MenuIcon onClick={() => toggleDrawer()} />
+        <Container>
+          <Toolbar>
+            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+              <Hidden mdUp>
+                <MenuIcon onClick={() => toggleDrawer()} />
+              </Hidden>
+            </IconButton>
+            <img src="assets/images/bg_2.png" width="50px" style={{ marginTop: -5 }} />
+            <Typography variant="h6" className={classes.title}>
+              &nbsp;O2 Native Cow Milk</Typography>
+            <Hidden smDown>
+              <Button color="inherit" className={classes.li} onClick={() => props.history.push("/home")}>home</Button>
+              <Button color="inherit" className={classes.li} onClick={() => props.history.push("/about")}>about us</Button>
+              <Button color="inherit" className={classes.li}>contact us</Button>
+              <Button color="inherit" className={classes.li} onClick={() => props.history.push("/login")}>Login</Button>
+              <Button color="inherit" className={classes.li}><ShoppingCartIcon /> cart</Button>
             </Hidden>
-          </IconButton>
-          <img src="assets/images/bg_2.png" width="50px" style={{ marginTop: -5 }} />
-          <Typography variant="h6" className={classes.title}>
-            &nbsp;O2 Native Cow Milk</Typography>
-          <Hidden smDown>
-            <Button color="inherit" className={classes.li} onClick={() => props.history.push("/home")}>home</Button>
-            <Button color="inherit" className={classes.li} onClick={() => props.history.push("/about")}>about us</Button>
-            <Button color="inherit" className={classes.li}>contact us</Button>
-            <Button color="inherit" className={classes.li} onClick={() => props.history.push("/login")}>Login</Button>
-            <Button color="inherit" className={classes.li}><ShoppingCartIcon /> cart</Button>
-          </Hidden>
-        </Toolbar>
+          </Toolbar>
+        </Container>
       </AppBar>
 
       <Drawer anchor={"left"} open={state.open} onClose={() => toggleDrawer()} className={classes.main}>
