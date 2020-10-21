@@ -42,7 +42,10 @@ const useStyles = theme => ({
         alignItems: "center",
         marginLeft: "46%",
         cursor: "pointer"
-
+    }, avtr: {
+        fontSize: 40,
+        color: "#fff",
+        marginRight: 35,
     }
 });
 
@@ -71,6 +74,10 @@ class Footer extends React.Component {
                         <Grid item xs={12} sm={4}>
                             <Typography className={classes.titles}>O2 NATIVE COW MILK</Typography>
                             <Typography className={classes.dis}>Our primary goal is to nurture the society and its offsprings with our best efforts, a dedicated village and a farmer's society working diligently to nourish the indigenous cow breeds.</Typography>
+
+                            <a className={classes.avtr} href="https://twitter.com/O2Organics?s=08"><i class="fa fa-twitter"></i></a>
+                            <a className={classes.avtr} href="https://www.facebook.com/o.organics.5"><i class="fa fa-facebook-square"></i></a>
+                            <a className={classes.avtr} href="https://www.instagram.com/invites/contact/?i=m4nd67r413&utm_content=jnewckk"><i class="fa fa-instagram"></i></a>
                         </Grid>
                         <Grid item xs={12} sm={1}>
                             <Typography className={`${classes.top} ${classes.titles}`}>MENU</Typography>
@@ -78,6 +85,8 @@ class Footer extends React.Component {
                             <Typography className={classes.dis}>About Us</Typography>
                             <Typography className={classes.dis}>Contact Us</Typography>
                             <Typography className={classes.dis}>Store</Typography>
+
+
                         </Grid>
                         <Grid item xs={12} sm={2}>
                             <Typography className={classes.titles}>HELP</Typography>
