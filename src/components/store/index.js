@@ -38,7 +38,7 @@ const data = [
         rs: "5778",
         dis: "9878"
     }
-]
+];
 const useStyles = theme => ({
     root: {
         display: "flex",
@@ -147,7 +147,7 @@ class Store extends React.Component {
             <Container>
                 <Grid container style={{ margin: "30px 0px" }}>
                     {data.map(item => {
-                        return <Grid item xs={12} sm={4} md={3}>
+                        return <Grid item xs={12} sm={4} md={3} onClick={()=>this.props.history.push("/storedetails")}>
                             <div className={classes.root}>
 
                                 <Card className={classes.card} >

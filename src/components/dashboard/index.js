@@ -1,7 +1,7 @@
 import React from "react";
 import { withStyles, Typography, CardActionArea, CardMedia, Card, CardContent, CardActions, Button, Container } from '@material-ui/core';
 import Slider from "react-slick";
-import "./home.css"
+import "./home.css";
 // {* -------------Dashboard  import  compoents -------------*}
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 

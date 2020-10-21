@@ -25,6 +25,7 @@ export const RouterApp = (props) => {
                 <Route exact component={Home} path={routes.home} />
                 <Route exact component={Home} path={routes.about} />
                 <Route exact component={Home} path={routes.store} />
+                <Route exact component={Home} path={routes.StoreDetails} />
             </Switch>
         </Router>
     )

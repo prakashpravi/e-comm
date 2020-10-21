@@ -4,6 +4,7 @@ const routes = {
     home: '/home',
     about: '/about',
     store: '/store',
+    StoreDetails:"/storedetails"
 }
 
 export default routes;
