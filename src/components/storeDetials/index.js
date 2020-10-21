@@ -144,7 +144,7 @@ class StoreDetails extends React.Component {
                             </Card>
 
                             <Card className={classes.card1}>
-                                <Button variant="contained" className={classes.btn}>Buy Now</Button>
+                                <Button variant="contained" className={classes.btn} onClick={() => this.props.history.push("/cart")}>Buy Now</Button>
                             </Card>
 
                         </Grid>

@@ -374,8 +374,6 @@ class About extends React.Component {
                         </Grid>
                     </Grid>
                 </div>
-
-
                 <Grid container>
                     <Grid item xs={12}>
                         <img alt="img" className={classes.sndImg1} src="assets/images/gallery/7.JPG" width="100%" height="100%" />
@@ -415,8 +413,6 @@ class About extends React.Component {
                     })}
                     <Grid item xs={12} sm={1} md={1} lg={1} />
                 </Grid>
-
-
             </div >
         );
     }

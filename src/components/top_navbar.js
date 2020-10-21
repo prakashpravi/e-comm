@@ -89,7 +89,7 @@ const Navbar = props => {
     },
     {
       name: "cart",
-      path: "/"
+      path: "/cart"
     },
     {
       name: "store",
@@ -115,7 +115,7 @@ const Navbar = props => {
               <Button color="inherit" className={classes.li} onClick={() => props.history.push("/about")}>about us</Button>
               <Button color="inherit" className={classes.li} onClick={() => props.history.push("/contact")}>contact us</Button>
               <Button color="inherit" className={classes.li} onClick={() => props.history.push("/login")}>Login</Button>
-              <Button color="inherit" className={classes.li}><ShoppingCartIcon /> cart</Button>
+              <Button color="inherit" className={classes.li} onClick={() => props.history.push("/cart")}><ShoppingCartIcon /> cart</Button>
               <Button color="inherit" className={classes.li} onClick={() => props.history.push("/store")}><StorefrontIcon /> Store</Button>
             </Hidden>
           </Toolbar>

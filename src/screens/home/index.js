@@ -16,6 +16,7 @@ import Footer from "../../components/footer/index";
 import Store from "../../components/store/index";
 import StoreDetails from "../../components/storeDetials/index";
 import Contact from "../../components/contact/index";
+import Cart from "../../components/cart/index";
 
 // {*----------home page parent components style-----------*}
 
@@ -49,6 +50,8 @@ class Home extends React.Component {
             return <StoreDetails {...this.props} />;
         } else if (this.props.match.path === routes.Contact) {
             return <Contact {...this.props} />;
+        }else if (this.props.match.path === routes.Cart) {
+            return <Cart {...this.props} />;
         }
     };
     render() {
