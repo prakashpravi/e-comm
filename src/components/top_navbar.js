@@ -6,6 +6,7 @@ import { withRouter } from "react-router-dom";
 import MenuIcon from '@material-ui/icons/Menu';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import StorefrontIcon from '@material-ui/icons/Storefront';
 // {* -------------topnavbar  styles -------------*} 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -90,6 +91,10 @@ const Navbar = props => {
       name: "cart",
       path: "/"
     },
+    {
+      name: "store",
+      path: "/store"
+    },
   ]
   return (
     <div className={classes.root}>
@@ -111,6 +116,7 @@ const Navbar = props => {
               <Button color="inherit" className={classes.li}>contact us</Button>
               <Button color="inherit" className={classes.li} onClick={() => props.history.push("/login")}>Login</Button>
               <Button color="inherit" className={classes.li}><ShoppingCartIcon /> cart</Button>
+              <Button color="inherit" className={classes.li} onClick={() => props.history.push("/store")}><StorefrontIcon /> Store</Button>
             </Hidden>
           </Toolbar>
         </Container>
