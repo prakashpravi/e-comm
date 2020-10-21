@@ -81,7 +81,7 @@ const Navbar = props => {
     },
     {
       name: "contact us",
-      path: "/"
+      path: "/contact"
     },
     {
       name: "Login",
@@ -113,7 +113,7 @@ const Navbar = props => {
             <Hidden smDown>
               <Button color="inherit" className={classes.li} onClick={() => props.history.push("/home")}>home</Button>
               <Button color="inherit" className={classes.li} onClick={() => props.history.push("/about")}>about us</Button>
-              <Button color="inherit" className={classes.li}>contact us</Button>
+              <Button color="inherit" className={classes.li} onClick={() => props.history.push("/contact")}>contact us</Button>
               <Button color="inherit" className={classes.li} onClick={() => props.history.push("/login")}>Login</Button>
               <Button color="inherit" className={classes.li}><ShoppingCartIcon /> cart</Button>
               <Button color="inherit" className={classes.li} onClick={() => props.history.push("/store")}><StorefrontIcon /> Store</Button>

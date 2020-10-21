@@ -15,6 +15,7 @@ import Sidenavlinks from "../../components/sidenavlinks/index";
 import Footer from "../../components/footer/index";
 import Store from "../../components/store/index";
 import StoreDetails from "../../components/storeDetials/index";
+import Contact from "../../components/contact/index";
 
 // {*----------home page parent components style-----------*}
 
@@ -46,6 +47,8 @@ class Home extends React.Component {
             return <Store {...this.props} />;
         } else if (this.props.match.path === routes.StoreDetails) {
             return <StoreDetails {...this.props} />;
+        } else if (this.props.match.path === routes.Contact) {
+            return <Contact {...this.props} />;
         }
     };
     render() {

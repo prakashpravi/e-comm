@@ -23,7 +23,7 @@ const useStyles = theme => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        boxShadow: "inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(63, 40, 3, 0.7)",
+        boxShadow: "0px 2px 4px 4px rgba(0, 0, 0, 0.1), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
         color: " #555555",
         borderRadius: 12,
         padding: 20,
@@ -91,7 +91,7 @@ const useStyles = theme => ({
     }, text: {
         textAlign: "center",
         fontSize: 40,
-        margin: "30px",
+        margin: 0,
         [theme.breakpoints.down('xs')]: {
             fontSize: 30,
         },

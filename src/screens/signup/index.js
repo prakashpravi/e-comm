@@ -80,7 +80,7 @@ const useStyles = theme => ({
   }, text: {
     textAlign: "center",
     fontSize: 40,
-    margin: "30px",
+    margin: 0,
     color: "#fff",
     [theme.breakpoints.down('xs')]: {
       fontSize: 30,
@@ -306,7 +306,7 @@ class Signup extends React.Component {
               </Grid>
             </Grid>
           </Grid>
-        </div><br />
+        </div><br /><br />
       </Grid >
     );
   }

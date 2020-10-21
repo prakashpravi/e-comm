@@ -398,12 +398,15 @@
     }
 }
 
+
 @media only screen and (max-width: 320px) {
     .fiftyImg {
         width: 50%;
         align-items: center;
         display: flex;
     }
+
+
 }
 
 @media only screen and (min-width: 1200px) {
@@ -510,6 +513,16 @@
 .slick-next:before {
     color: #fff !important;
     font-size: 30px !important;
+}
+
+.lo {
+    margin: 4px;
+}
+
+@media only screen and (max-width: 426px) {
+    .lo {
+        margin: 3px;
+    }
 }
 
 /* .card {

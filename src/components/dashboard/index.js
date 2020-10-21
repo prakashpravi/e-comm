@@ -492,7 +492,7 @@ const useStyles = theme => ({
             fontSize: 12,
         },
     }
-});  
+});
 
 // InitialState
 const initialState = {
@@ -615,7 +615,7 @@ class Dashboard extends React.Component {
                         {homePage?.list?.all.map(l => {
                             return <Grid item>
                                 <div className={classes.chip}>
-                                    <i class="fa fa-map-marker" style={{ margin: 4 }}></i> {l}
+                                    <i class="fa fa-map-marker lo"></i> {l}
                                 </div>
                             </Grid>
                         })}
