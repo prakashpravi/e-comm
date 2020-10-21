@@ -139,11 +139,23 @@ class StoreDetails extends React.Component {
                             <Card className={classes.card1}>
                                 <Typography variant="body1"
                                     component="span" className={`${classes.titles}`}>
+                                    <span style={{ fontWeight: "bold" }}>Price</span>
+                                    <br />
+                                    {new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0 }).format(Math.round("878675"))}
+                                </Typography>
+                                <br /><br />
+                                <Typography variant="body1"
+                                    component="span" className={`${classes.titles}`}>
                                     <span style={{ fontWeight: "bold" }}>Quantity</span>
                                 </Typography>
                             </Card>
 
                             <Card className={classes.card1}>
+                                <Typography variant="body1"
+                                    component="span" className={`${classes.titles}`}>
+                                    <span> <i style={{ color: "#f46955", fontSize: 20 }} class="fa fa-truck"></i> Shipping Out: Tomorrow 7:30AM - 9:30AM</span>
+                                </Typography>
+                                <br /><br />
                                 <Button variant="contained" className={classes.btn} onClick={() => this.props.history.push("/cart")}>Buy Now</Button>
                             </Card>
 
