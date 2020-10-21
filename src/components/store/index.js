@@ -79,7 +79,7 @@ const useStyles = theme => ({
         margin: 'auto !important',
     },
     offerMainPrice: {
-        color: "#ed1165",
+        color: "#006da8",
         [theme.breakpoints.down('sm')]: {
             fontSize: '0.9rem'
         },
