@@ -5,7 +5,7 @@ import Card from "@material-ui/core/Card";
 import Grid from "@material-ui/core/Grid";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
+import { Typography, Container } from "@material-ui/core";
 
 const data = [
     {
@@ -144,71 +144,72 @@ class Store extends React.Component {
     render() {
         const { classes } = this.props;
         return (
-            <Grid container style={{ margin: "30px 0px" }}>
-                {data.map(item => {
-                    return <Grid item xs={12} sm={4} md={3}>
-                        <div className={classes.root}>
+            <Container>
+                <Grid container style={{ margin: "30px 0px" }}>
+                    {data.map(item => {
+                        return <Grid item xs={12} sm={4} md={3}>
+                            <div className={classes.root}>
 
-                            <Card className={classes.card} >
-                                <CardActions style={{
-                                }} className={`${classes.cardAtionspadding} ${classes.cardActionsImage}`}>
-                                    <img alt="img" style={{ objectFit: "scale-down" }} width="100%" height="100%s" src={item.img} />
-                                </CardActions>
+                                <Card className={classes.card} >
+                                    <CardActions style={{
+                                    }} className={`${classes.cardAtionspadding} ${classes.cardActionsImage}`}>
+                                        <img alt="img" style={{ objectFit: "scale-down" }} width="100%" height="100%s" src={item.img} />
+                                    </CardActions>
 
-                                <Card className={classes.priceClass}>
-                                    <CardContent className={classes.cardContent} style={{ display: 'flex' }}>
-                                        <Grid
-                                            container
-                                            item
-                                            xs={12}
-                                            className={classes.textPriceCardGrid}
-                                            alignItems="center"
-                                        >
-                                            <Typography variant="body1"
-                                                component="span" style={{ paddingLeft: "5px" }} className={`${classes.titles}`}>
-                                                {item.name}
-                                            </Typography>
-                                            <Grid container item xs={12} sm={12} className={`${classes.priceClassMain}`} style={{ alignItems: "center" }}>
-                                                <Typography
-                                                    variant="h6"
-                                                    component="h6"
-                                                    className={classes.offerMainPrice}
-                                                    style={{
-                                                        width: "100%",
-                                                        justifyContent: "flex-start",
-                                                        display: "flex",
-                                                        paddingLeft: "5px",
-
-                                                    }}>
-
-                                                    {new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0 }).format(Math.round(item.rs))}
+                                    <Card className={classes.priceClass}>
+                                        <CardContent className={classes.cardContent} style={{ display: 'flex' }}>
+                                            <Grid
+                                                container
+                                                item
+                                                xs={12}
+                                                className={classes.textPriceCardGrid}
+                                                alignItems="center"
+                                            >
+                                                <Typography variant="body1"
+                                                    component="span" style={{ paddingLeft: "5px" }} className={`${classes.titles}`}>
+                                                    {item.name}
                                                 </Typography>
-                                                <Typography
-                                                    style={{
-                                                        width: "100%",
-                                                        justifyContent: "flex-start",
-                                                        display: "flex",
-                                                        marginTop: "4px"
-                                                    }}
-                                                    gutterBottom
-                                                    variant="body1"
-                                                    component="span"
-                                                    className={classes.offerPrice}
-                                                >
-                                                    <del>
-                                                        {new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0 }).format(Math.round(item.dis))}
-                                                    </del>
+                                                <Grid container item xs={12} sm={12} className={`${classes.priceClassMain}`} style={{ alignItems: "center" }}>
+                                                    <Typography
+                                                        variant="h6"
+                                                        component="h6"
+                                                        className={classes.offerMainPrice}
+                                                        style={{
+                                                            width: "100%",
+                                                            justifyContent: "flex-start",
+                                                            display: "flex",
+                                                            paddingLeft: "5px",
 
-                                                </Typography>
+                                                        }}>
+
+                                                        {new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0 }).format(Math.round(item.rs))}
+                                                    </Typography>
+                                                    <Typography
+                                                        style={{
+                                                            width: "100%",
+                                                            justifyContent: "flex-start",
+                                                            display: "flex",
+                                                            marginTop: "4px"
+                                                        }}
+                                                        gutterBottom
+                                                        variant="body1"
+                                                        component="span"
+                                                        className={classes.offerPrice}
+                                                    >
+                                                        <del>
+                                                            {new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0 }).format(Math.round(item.dis))}
+                                                        </del>
+
+                                                    </Typography>
+                                                </Grid>
                                             </Grid>
-                                        </Grid>
-                                    </CardContent>
+                                        </CardContent>
+                                    </Card>
                                 </Card>
-                            </Card>
-                        </div > </Grid>
-                })}
-            </Grid>
-        );
+                            </div > </Grid>
+                    })}
+                </Grid>
+            </Container>);
     }
 };
 export default withRouter(withStyles(useStyles)(Store));
