@@ -7,7 +7,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 const useStyles = theme => ({
     root: {
         top: "100px",
-        position: "absolute",
+        position: "fixed",
         zIndex: 10
     }, list: {
         padding: 12,
