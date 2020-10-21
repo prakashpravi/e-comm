@@ -7,7 +7,7 @@ import { Navbar } from "../../components";
 import { withRouter } from "react-router-dom";
 import withStyles from '@material-ui/core/styles/withStyles';
 import routes from './../../router/routes';
-import Dashboard from "../../components/dashboard/index"
+import HomePage from "../../components/home/index"
 import Login from "../login/index";
 import Signup from "../signup/index";
 import About from "../../components/about/index";
@@ -17,6 +17,7 @@ import Store from "../../components/store/index";
 import StoreDetails from "../../components/storeDetials/index";
 import Contact from "../../components/contact/index";
 import Cart from "../../components/cart/index";
+import Dashboard from "../../components/dashboard/index";
 
 // {*----------home page parent components style-----------*}
 
@@ -37,7 +38,7 @@ class Home extends React.Component {
 
     giveMeComponentToRender = (auth) => {
         if (this.props.match.path === routes.home) {
-            return <Dashboard {...this.props} />;
+            return <HomePage {...this.props} />;
         } else if (this.props.match.path === routes.login) {
             return <Login {...this.props} />;
         } else if (this.props.match.path === routes.signup) {
@@ -50,8 +51,10 @@ class Home extends React.Component {
             return <StoreDetails {...this.props} />;
         } else if (this.props.match.path === routes.Contact) {
             return <Contact {...this.props} />;
-        }else if (this.props.match.path === routes.Cart) {
+        } else if (this.props.match.path === routes.Cart) {
             return <Cart {...this.props} />;
+        } else if (this.props.match.path === routes.Dashboard) {
+            return <Dashboard {...this.props} />;
         }
     };
     render() {
