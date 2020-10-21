@@ -109,7 +109,7 @@ class Cart extends React.Component {
                     {data.map(cart => {
                         return <Grid item xs={12} sm={4}>
                             <div className={classes.winerow}>
-                                <img className={classes.img} src={cart.img} />
+                                <img alt="img" className={classes.img} src={cart.img} />
                                 <div className={classes.winetextcontainer}>
                                     <div className={classes.titles}>{cart.name}</div>
                                     <div style={{ fontWeight: "bold" }}>{new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0 }).format(Math.round(cart.rs))}</div>
