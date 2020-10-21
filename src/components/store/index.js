@@ -47,7 +47,6 @@ const useStyles = theme => ({
     card: {
         boxShadow: "0px 2px 4px 4px rgba(0, 0, 0, 0.1), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12) !important",
         borderRadius: 16,
-        width: "100%",
         overflow: "hidden",
         width: "96%",
         margin: "10px 0px"
@@ -105,7 +104,6 @@ const useStyles = theme => ({
         },
         [theme.breakpoints.down('sm')]: {
             textAlign: 'left',
-            padding: '0 !important',
             paddingTop: '4px !important',
             paddingBottom: '4px !important',
             padding: 5,
@@ -154,7 +152,7 @@ class Store extends React.Component {
                             <Card className={classes.card} >
                                 <CardActions style={{
                                 }} className={`${classes.cardAtionspadding} ${classes.cardActionsImage}`}>
-                                    <img style={{ objectFit: "scale-down" }} width="100%" height="100%s" src={item.img} />
+                                    <img alt="img" style={{ objectFit: "scale-down" }} width="100%" height="100%s" src={item.img} />
                                 </CardActions>
 
                                 <Card className={classes.priceClass}>
