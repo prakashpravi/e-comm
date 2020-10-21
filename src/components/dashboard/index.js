@@ -316,7 +316,7 @@ const useStyles = theme => ({
 
         [theme.breakpoints.down('xs')]: {
             marginBottom: 10,
-            marginTop: 30,
+            marginTop: 10,
         },
         "&:hover": {
             transform: "scale(1.03)",
@@ -621,7 +621,7 @@ class Dashboard extends React.Component {
                             </Grid>
                         })}
                     </Grid>
-                </div>
+                </div><br/>
                 <Container>
                     <Grid container spacing={2}>
                         {homePage?.cards?.data.map(val => {
@@ -656,7 +656,7 @@ class Dashboard extends React.Component {
                     </Grid>
                 </Container>
 
-                <br /></div >
+                <br /><br /></div >
         );
     }
 }

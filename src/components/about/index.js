@@ -100,7 +100,7 @@ const useStyles = theme => ({
 
         [theme.breakpoints.down('xs')]: {
             marginBottom: 10,
-            marginTop: 30,
+            marginTop: 10,
         },
         "&:hover": {
             transform: "scale(1.03)",
@@ -151,6 +151,9 @@ const useStyles = theme => ({
             boxShadow: "0 45px 100px rgba(14,21,47,0.4), 0 16px 40px rgba(14,21,47,0.4)",
             background: "#fff",
             border: "1px solid #000"
+        },
+        [theme.breakpoints.down('xs')]: {
+            marginBottom: 30,
         }
     }, about: {
         textAlign: "center",
@@ -228,6 +231,7 @@ const useStyles = theme => ({
         marginTop: 50,
         [theme.breakpoints.down('xs')]: {
             fontSize: 42,
+            marginBottom: 30
         }
     }, cards1: {
         boxShadow: "-6px 6px 1px rgba(0, 0, 0, 0.3)",
@@ -238,7 +242,7 @@ const useStyles = theme => ({
 
         [theme.breakpoints.down('xs')]: {
             marginBottom: 50,
-            marginTop: 50,
+            marginTop: 0,
         },
         "&:hover": {
             transform: "scale(1.03)",
