@@ -33,7 +33,6 @@ const useStyles = theme => ({
     }, avatar: {
         height: "50px",
         width: "50px",
-
         marginTop: -90,
         position: "absolute",
         background: "#fff",
@@ -62,7 +61,7 @@ class Footer extends React.Component {
         return (
             <div className={classes.root}>
                 <div className={classes.avatar} onClick={() => this.scroll()}>
-                    <ExpandLessIcon style={{ marginTop: 4 }} />
+                    <ExpandLessIcon />
                 </div>
                 <Container>
                     <Grid container spacing={2}

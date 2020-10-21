@@ -352,7 +352,7 @@ class About extends React.Component {
                     <Grid container >
                         <Grid item xs={12} sm={6} style={{ margin: "auto" }}>
                             <div className={classes.about}>
-                                <Typography className={classes.msnt}>OUR MISSION<span style={{ color: "#000" }}>US</span></Typography>
+                                <Typography className={classes.msnt}>OUR MISSION</Typography>
                                 <Typography className={classes.msnd}>Our primary goal is to nurture the society and its offsprings with our best efforts, a dedicated village and a farmer's society working diligently to nourish the indigenous cow breeds</Typography>
                                 <br />
                                 <br />
@@ -366,8 +366,7 @@ class About extends React.Component {
                             </div>
                         </Grid>
                         <Grid item xs={12} sm={6}>
-
-                            <img alt="img" width="100%" src="assets/images/gallery/3.JPG" style={{ borderRadius: 20 }} />
+                            <img alt="img" width="100%" src="assets/images/home_slider/DSC_0605-min.JPG" style={{ borderRadius: 20 }} />
                         </Grid>
                     </Grid>
                 </div>
