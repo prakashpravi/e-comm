@@ -79,6 +79,7 @@ const useStyles = theme => ({
         margin: 'auto !important',
     },
     offerMainPrice: {
+        width: "auto",
         color: "#006da8",
         [theme.breakpoints.down('sm')]: {
             fontSize: '0.9rem'
@@ -147,7 +148,7 @@ class Store extends React.Component {
             <Container>
                 <Grid container style={{ margin: "30px 0px" }}>
                     {data.map(item => {
-                        return <Grid item xs={12} sm={4} md={3} onClick={()=>this.props.history.push("/storedetails")}>
+                        return <Grid item xs={12} sm={4} md={3} onClick={() => this.props.history.push("/storedetails")}>
                             <div className={classes.root}>
 
                                 <Card className={classes.card} >
@@ -175,13 +176,11 @@ class Store extends React.Component {
                                                         component="h6"
                                                         className={classes.offerMainPrice}
                                                         style={{
-                                                            width: "100%",
                                                             justifyContent: "flex-start",
                                                             display: "flex",
                                                             paddingLeft: "5px",
 
                                                         }}>
-
                                                         {new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0 }).format(Math.round(item.rs))}
                                                     </Typography>
                                                     <Typography
@@ -189,7 +188,7 @@ class Store extends React.Component {
                                                             width: "100%",
                                                             justifyContent: "flex-start",
                                                             display: "flex",
-                                                            marginTop: "4px"
+                                                            marginTop: 7
                                                         }}
                                                         gutterBottom
                                                         variant="body1"
