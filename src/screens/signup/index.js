@@ -54,7 +54,7 @@ const useStyles = theme => ({
   letter: {
     color: "#80B500",
     cursor: "pointer",
-    fontWeight:"bold"
+    fontWeight: "bold"
   },
   submit: {
     borderRadius: 8,
@@ -92,7 +92,7 @@ const initialState = {
   area: null,
   ordertype: null,
   productlist: null,
-  date: null,
+  date: new Date(),
   quantity: null,
   plan: null
 }

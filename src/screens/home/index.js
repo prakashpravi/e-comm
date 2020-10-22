@@ -18,6 +18,7 @@ import StoreDetails from "../../components/storeDetials/index";
 import Contact from "../../components/contact/index";
 import Cart from "../../components/cart/index";
 import Dashboard from "../../components/dashboard/index";
+import Checkout from "../../components/checkout/index";
 
 // {*----------home page parent components style-----------*}
 
@@ -55,6 +56,8 @@ class Home extends React.Component {
             return <Cart {...this.props} />;
         } else if (this.props.match.path === routes.Dashboard) {
             return <Dashboard {...this.props} />;
+        } else if (this.props.match.path === routes.checkout) {
+            return <Checkout {...this.props} />;
         }
     };
     render() {

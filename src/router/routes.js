@@ -7,7 +7,8 @@ const routes = {
     StoreDetails:"/storedetails",
     Contact:"/contact",
     Cart:"/cart",
-    Dashboard:"/dashboard"
+    Dashboard:"/dashboard",
+    checkout:"/checkout"
 }
 
 export default routes;

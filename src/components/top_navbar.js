@@ -94,33 +94,40 @@ const Navbar = props => {
     {
       name: "store",
       path: "/store"
+    }, {
+      name: "Dashboard",
+      path: "/dashboard"
+    }, {
+      name: "Checkout",
+      path: "/checkout"
     },
   ]
   return (
     <div className={classes.root}>
       {/* // {* -------------topnavbar  componts -------------*} */}
       <AppBar position="fixed" style={{ background: "#3E4958" }}>
-        <Container>
-          <Toolbar>
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-              <Hidden mdUp>
-                <MenuIcon onClick={() => toggleDrawer()} />
-              </Hidden>
-            </IconButton>
-            <img alt="img" src="assets/images/bg_2.png" width="50px" style={{ marginTop: -5 }} />
-            <Typography variant="h6" className={classes.title}>
-              &nbsp;O2 Native Cow Milk</Typography>
-            <Hidden smDown>
-              <Button color="inherit" className={classes.li} onClick={() => props.history.push("/dashboard")}>Dashboard</Button>
-              <Button color="inherit" className={classes.li} onClick={() => props.history.push("/home")}>home</Button>
-              <Button color="inherit" className={classes.li} onClick={() => props.history.push("/about")}>about us</Button>
-              <Button color="inherit" className={classes.li} onClick={() => props.history.push("/contact")}>contact us</Button>
-              <Button color="inherit" className={classes.li} onClick={() => props.history.push("/login")}>Login</Button>
-              <Button color="inherit" className={classes.li} onClick={() => props.history.push("/cart")}><ShoppingCartIcon /> cart</Button>
-              <Button color="inherit" className={classes.li} onClick={() => props.history.push("/store")}><StorefrontIcon /> Store</Button>
+        {/* <Container> */}
+        <Toolbar>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <Hidden mdUp>
+              <MenuIcon onClick={() => toggleDrawer()} />
             </Hidden>
-          </Toolbar>
-        </Container>
+          </IconButton>
+          <img alt="img" src="assets/images/bg_2.png" width="50px" style={{ marginTop: -5 }} />
+          <Typography variant="h6" className={classes.title}>
+            &nbsp;O2 Native Cow Milk</Typography>
+          <Hidden smDown>
+            <Button color="inherit" className={classes.li} onClick={() => props.history.push("/dashboard")}>Dashboard</Button>
+            <Button color="inherit" className={classes.li} onClick={() => props.history.push("/checkout")}>Checkout</Button>
+            <Button color="inherit" className={classes.li} onClick={() => props.history.push("/home")}>home</Button>
+            <Button color="inherit" className={classes.li} onClick={() => props.history.push("/about")}>about us</Button>
+            <Button color="inherit" className={classes.li} onClick={() => props.history.push("/contact")}>contact us</Button>
+            <Button color="inherit" className={classes.li} onClick={() => props.history.push("/login")}>Login</Button>
+            <Button color="inherit" className={classes.li} onClick={() => props.history.push("/cart")}><ShoppingCartIcon /> cart</Button>
+            <Button color="inherit" className={classes.li} onClick={() => props.history.push("/store")}><StorefrontIcon /> Store</Button>
+          </Hidden>
+        </Toolbar>
+        {/* </Container> */}
       </AppBar>
 
       <Drawer anchor={"left"} open={state.open} onClose={() => toggleDrawer()} className={classes.main}>

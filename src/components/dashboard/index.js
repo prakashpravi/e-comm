@@ -23,7 +23,6 @@ import {
 // import ColorLens from '@material-ui/icons/ColorLens';
 import { withStyles } from '@material-ui/core/styles';
 // import { owners } from '../../../demo-data/tasks';
-import { withRouter } from "react-router-dom";
 // import TodayIcon from '@material-ui/icons/Today';
 import { green, deepOrange, lightBlue } from '@material-ui/core/colors';
 import { Container } from '@material-ui/core';
@@ -341,11 +340,7 @@ const resources = [{
     title: 'Owners',
     instances: owners,
 }];
-const useStyles = theme => ({
-    datepic: {
-        background: "#000"
-    }
-})
+
 const getBorder = theme => (`1px solid ${theme.palette.type === 'light'
     ? lighten(fade(theme.palette.divider, 1), 0.88)
     : darken(fade(theme.palette.divider, 1), 0.68)
@@ -546,7 +541,7 @@ const FlexibleSpace = withStyles(styles, { name: 'ToolbarRoot' })(({ classes, ..
     </Toolbar.FlexibleSpace>
 ));
 
-export class Dashboard extends React.PureComponent {
+export default class Dashboard extends React.PureComponent {
     // #FOLD_BLOCK
     constructor(props) {
         super(props);
@@ -580,7 +575,6 @@ export class Dashboard extends React.PureComponent {
     render() {
         const { data } = this.state;
 
-        const { classes } = this.props;
 
         return (
             <div style={{ width: "100%", margin: "50px 0px" }}>
@@ -619,7 +613,7 @@ export class Dashboard extends React.PureComponent {
                                 flexibleSpaceComponent={FlexibleSpace}
 
                             />
-                            <DateNavigator className={classes.datepic} />
+                            <DateNavigator />
 
                             <EditRecurrenceMenu />
                             <AppointmentTooltip
@@ -637,4 +631,3 @@ export class Dashboard extends React.PureComponent {
         );
     }
 }
-export default withRouter(withStyles(useStyles)(Dashboard));
