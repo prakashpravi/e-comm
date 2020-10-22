@@ -25,19 +25,6 @@
             "main": "#f44336",
             "dark": "#d32f2f",
             "contrastText": "#fff"
-        },
-        "text": {
-            "primary": "rgba(255, 255, 255, 0.8)",
-            "secondary": "rgba(108, 110, 131, 0.3)",
-            "disabled": "rgba(0, 0, 0, 0.38)",
-            "hint": "rgba(0, 0, 0, 0.38)",
-            "hover":"rgb(32, 88, 241)"
-        },
-        "icon": {
-            "main": "#40467f",
-            "moreicon": "#363a65",
-            "model": "#100e1db5",
-            "icons": "rgba(0, 0, 0, 0.16)"
         }
     }
 }

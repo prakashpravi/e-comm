@@ -111,6 +111,7 @@ const Navbar = props => {
             <Typography variant="h6" className={classes.title}>
               &nbsp;O2 Native Cow Milk</Typography>
             <Hidden smDown>
+              <Button color="inherit" className={classes.li} onClick={() => props.history.push("/dashboard")}>Dashboard</Button>
               <Button color="inherit" className={classes.li} onClick={() => props.history.push("/home")}>home</Button>
               <Button color="inherit" className={classes.li} onClick={() => props.history.push("/about")}>about us</Button>
               <Button color="inherit" className={classes.li} onClick={() => props.history.push("/contact")}>contact us</Button>
