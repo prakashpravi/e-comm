@@ -70,6 +70,7 @@ const useStyles = theme => ({
         height: 70,
         padding: "10px 0px",
         border: "1px solid #ddd",
+        cursor: "pointer",
         borderRadius: 12,
     }, winetextcontainer: {
         justifyContent: "center",
@@ -108,7 +109,7 @@ class Cart extends React.Component {
                 <Grid container spacing={2}>
                     {data.map(cart => {
                         return <Grid item xs={12} sm={4}>
-                            <div className={classes.winerow}>
+                            <div className={classes.winerow} onClick={() => this.props.history.push("/checkout")}>
                                 <img alt="img" className={classes.img} src={cart.img} />
                                 <div className={classes.winetextcontainer}>
                                     <div className={classes.titles}>{cart.name}</div>
