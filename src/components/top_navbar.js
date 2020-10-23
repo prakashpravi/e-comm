@@ -100,6 +100,9 @@ const Navbar = props => {
     }, {
       name: "Checkout",
       path: "/checkout"
+    }, {
+      name: "Admin",
+      path: "/admin"
     },
   ]
   return (
@@ -119,6 +122,7 @@ const Navbar = props => {
           <Hidden smDown>
             <Button color="inherit" className={classes.li} onClick={() => props.history.push("/dashboard")}>Dashboard</Button>
             <Button color="inherit" className={classes.li} onClick={() => props.history.push("/checkout")}>Checkout</Button>
+            <Button color="inherit" className={classes.li} onClick={() => props.history.push("/admin")}>Admin</Button>
             <Button color="inherit" className={classes.li} onClick={() => props.history.push("/home")}>home</Button>
             <Button color="inherit" className={classes.li} onClick={() => props.history.push("/about")}>about us</Button>
             <Button color="inherit" className={classes.li} onClick={() => props.history.push("/contact")}>contact us</Button>

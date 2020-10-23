@@ -30,6 +30,7 @@ export const RouterApp = (props) => {
                 <Route exact component={Home} path={routes.Cart} />
                 <Route exact component={Home} path={routes.Dashboard} />
                 <Route exact component={Home} path={routes.checkout} />
+                <Route exact component={Home} path={routes.admin} />
             </Switch>
         </Router>
     )

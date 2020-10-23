@@ -8,7 +8,8 @@ const routes = {
     Contact:"/contact",
     Cart:"/cart",
     Dashboard:"/dashboard",
-    checkout:"/checkout"
+    checkout:"/checkout",
+    admin:"/admin",
 }
 
 export default routes;
