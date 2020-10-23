@@ -308,7 +308,7 @@ const useStyles = theme => ({
         }
     },
     cards: {
-        boxShadow: "-7px 7px 1px rgba(0, 0, 0, 0.3)",
+        boxShadow: "0px 2px 4px 4px rgba(0, 0, 0, 0.1), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12) !important",
         borderRadius: 25,
         padding: 12,
         marginBottom: 80,
@@ -345,7 +345,7 @@ const useStyles = theme => ({
         fontSize: 46,
         textAlign: "center",
         textShadow: "0 0 5px rgba(0, 0, 0, 0.2)",
-        filter: "drop-shadow(-6.4px 6.2px 8px rgba(0, 0, 0, 0.6))",
+        filter: "drop-shadow(-0.4px 0.2px 2px rgba(0, 0, 0, 0.6))",
         [theme.breakpoints.down('xs')]: {
             fontSize: 34,
         },
@@ -359,7 +359,7 @@ const useStyles = theme => ({
         filter: "drop-shadow(-6.4px 6.2px 8px rgba(0, 0, 0, 0.6))",
         [theme.breakpoints.down('xs')]: {
             fontSize: 50,
-            marginTop:20
+            marginTop: 20
         }
     }, vsnTitleone: {
         fontWeight: "bold",
@@ -471,7 +471,7 @@ const useStyles = theme => ({
         fontSize: "30px",
         marginBottom: "-6px",
     }, chipdiv: {
-        boxShadow: "0px 0.5em 2em -1em #999",
+        boxShadow: "0px 2px 4px 4px rgba(0, 0, 0, 0.1), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12) !important",
         padding: "40px 20px",
         borderRadius: 20,
         margin: "0px 4%",
@@ -488,9 +488,9 @@ const useStyles = theme => ({
         boxShadow: "2px 2px 6px -1px #3d3d3d",
         fontWeight: 600,
         display: "flex",
-        fontSize: 14,
+        fontSize: 12,
         [theme.breakpoints.only('xs')]: {
-            fontSize: 12,
+            fontSize: 11,
         },
     }
 });
@@ -621,7 +621,7 @@ class HomePage extends React.Component {
                             </Grid>
                         })}
                     </Grid>
-                </div><br/>
+                </div><br />
                 <Container>
                     <Grid container spacing={2}>
                         {homePage?.cards?.data.map(val => {

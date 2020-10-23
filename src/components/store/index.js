@@ -37,6 +37,22 @@ const data = [
         name: "Cucumber",
         rs: "5778",
         dis: "9878"
+    }, {
+        img: "https://www.bigbasket.com/media/uploads/p/s/10000148_28-fresho-onion.jpg",
+        name: "Onion - Medium/Vengayam",
+        rs: "5778",
+        dis: "9878"
+    },
+    {
+        img: "https://www.bigbasket.com/media/uploads/p/s/10000072_16-fresho-carrot-local.jpg",
+        name: "Carrot - Local",
+        rs: "5778",
+        dis: "9878"
+    }, {
+        img: "https://www.bigbasket.com/media/uploads/p/s/10000137_18-fresho-mint-leaves.jpg",
+        name: "Mint Leaves",
+        rs: "5778",
+        dis: "9878"
     }
 ];
 const useStyles = theme => ({

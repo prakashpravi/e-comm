@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import withStyles from '@material-ui/core/styles/withStyles';
-import { Grid } from "@material-ui/core";
+import { Grid, Typography, Button } from "@material-ui/core";
 
 const data = [
     {
@@ -63,14 +63,14 @@ const data = [
 const useStyles = theme => ({
     root: {
         width: "100%",
-        margin: "50px 10px",
+        padding: "50px 10px",
         overflow: "hidden"
     }, winerow: {
         display: "flex",
         height: 70,
         padding: "10px 0px",
-        border: "1px solid #ddd",
         cursor: "pointer",
+        boxShadow: "0px 2px 4px 4px rgba(0, 0, 0, 0.1), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12) !important",
         borderRadius: 12,
     }, winetextcontainer: {
         justifyContent: "center",
@@ -82,17 +82,36 @@ const useStyles = theme => ({
         borderRadius: 12,
         margin: "0px 12px"
     }, titles: {
-        whiteSpace: 'nowrap',
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
+        // whiteSpace: 'nowrap',
+        // overflow: 'hidden',
+        // textOverflow: 'ellipsis',
         width: "100%",
         fontSize: 16,
         color: "#000",
         letterSpacing: 2,
         [theme.breakpoints.down('xs')]: {
-            width: "80%",
+            width: "100%",
         }
-    },
+    }, total: {
+        fontWeight: "bold",
+        fontSize: 30,
+        marginTop: 20,
+        marginRight: 40,
+        width: "100%"
+    }, btn: {
+        padding: "10px 26px",
+        background: "#3e4958",
+        marginTop: 10,
+        color: "#fff",
+        "&:hover": {
+            color: "#3e4958",
+            background: "#fff",
+            border: "1px solid #3e4958"
+        },
+        [theme.breakpoints.down('xs')]: {
+            marginTop: 30,
+        },
+    }
 });
 
 class Cart extends React.Component {
@@ -119,6 +138,12 @@ class Cart extends React.Component {
                         </Grid>
                     })}
                 </Grid>
+                <div style={{
+                    textAlign: "center"
+                }}>
+                    <Typography className={classes.total}>Total : 908090</Typography>
+                    <Button className={classes.btn} onClick={() => this.props.history.push("/checkout")}>Pay Now</Button>
+                </div>
             </div>
         );
     }

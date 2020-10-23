@@ -74,17 +74,20 @@ const useStyles = theme => ({
         borderRadius: 12,
         marginTop: "-180px",
         position: "relative",
-        boxShadow: "0 3px 5px 0 #00BCD4",
+        // boxShadow: "0 3px 5px 0 #00BCD4",
         paddingBottom: 18,
         [theme.breakpoints.down('xs')]: {
             marginTop: "-200px",
         }
     },
     scndt: {
-        fontSize: 45,
+        fontSize: 60,
         fontWeight: "bold",
         color: "#DBDBDB",
-        marginBottom: 12
+        marginBottom: 12,
+        [theme.breakpoints.down('xs')]: {
+            fontSize: 46,
+        }
     },
     scndb: {
         fontWeight: "bold",
@@ -92,7 +95,7 @@ const useStyles = theme => ({
         fontSize: 17,
     },
     cards: {
-        boxShadow: "-7px 7px 1px rgba(0, 0, 0, 0.3)",
+        boxShadow: "0px 2px 4px 4px rgba(0, 0, 0, 0.1), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12) !important",
         borderRadius: 25,
         padding: 12,
         marginBottom: 80,
@@ -234,7 +237,7 @@ const useStyles = theme => ({
             marginBottom: 30
         }
     }, cards1: {
-        boxShadow: "-6px 6px 1px rgba(0, 0, 0, 0.3)",
+        boxShadow: "0px 2px 4px 4px rgba(0, 0, 0, 0.1), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12) !important",
         borderRadius: 25,
         marginBottom: 80,
         marginTop: 80,
