@@ -8,7 +8,7 @@ const useStyles = theme => ({
     root: {
         top: "100px",
         position: "fixed",
-        zIndex: 10
+        zIndex: 100
     }, list: {
         padding: 12,
         background: "#55efc4",
